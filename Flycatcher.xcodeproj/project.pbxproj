@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85C85C129B8B4F541E965481 /* Pods_Flycatcher_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE7D3BE3B21D43F38F80DDB /* Pods_Flycatcher_iOS.framework */; };
 		D912171C1CB50EED00FDBC64 /* Flycatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D912171B1CB50EED00FDBC64 /* Flycatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D91217231CB50EED00FDBC64 /* Flycatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91217181CB50EED00FDBC64 /* Flycatcher.framework */; };
+		D91217231CB50EED00FDBC64 /* Flycatcher iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91217181CB50EED00FDBC64 /* Flycatcher iOS.framework */; };
 		D91217281CB50EED00FDBC64 /* FlycatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217271CB50EED00FDBC64 /* FlycatcherTests.swift */; };
+		D91217331CB518EF00FDBC64 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217321CB518EF00FDBC64 /* UIImageViewExtension.swift */; };
+		D91217351CB52B1700FDBC64 /* FlycatcherEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +26,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D91217181CB50EED00FDBC64 /* Flycatcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flycatcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EE7D3BE3B21D43F38F80DDB /* Pods_Flycatcher_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flycatcher_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81309ACDEAAF15A2B5C3B462 /* Pods-Flycatcher iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flycatcher iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flycatcher iOS/Pods-Flycatcher iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		86B066C123D40DB41660FF93 /* Pods-Flycatcher iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flycatcher iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flycatcher iOS/Pods-Flycatcher iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D91217181CB50EED00FDBC64 /* Flycatcher iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Flycatcher iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D912171B1CB50EED00FDBC64 /* Flycatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flycatcher.h; sourceTree = "<group>"; };
 		D912171D1CB50EED00FDBC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D91217221CB50EED00FDBC64 /* FlycatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlycatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D91217221CB50EED00FDBC64 /* FlycatcherTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FlycatcherTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91217271CB50EED00FDBC64 /* FlycatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlycatcherTests.swift; sourceTree = "<group>"; };
 		D91217291CB50EED00FDBC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D91217321CB518EF00FDBC64 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C85C129B8B4F541E965481 /* Pods_Flycatcher_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,27 +52,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D91217231CB50EED00FDBC64 /* Flycatcher.framework in Frameworks */,
+				D91217231CB50EED00FDBC64 /* Flycatcher iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1610CFD35FDFA45DAB716CFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81309ACDEAAF15A2B5C3B462 /* Pods-Flycatcher iOS.debug.xcconfig */,
+				86B066C123D40DB41660FF93 /* Pods-Flycatcher iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0846BB5C97AB502C03AC165 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EE7D3BE3B21D43F38F80DDB /* Pods_Flycatcher_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D912170E1CB50EED00FDBC64 = {
 			isa = PBXGroup;
 			children = (
 				D912171A1CB50EED00FDBC64 /* Flycatcher */,
 				D91217261CB50EED00FDBC64 /* FlycatcherTests */,
 				D91217191CB50EED00FDBC64 /* Products */,
+				1610CFD35FDFA45DAB716CFE /* Pods */,
+				C0846BB5C97AB502C03AC165 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		D91217191CB50EED00FDBC64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D91217181CB50EED00FDBC64 /* Flycatcher.framework */,
-				D91217221CB50EED00FDBC64 /* FlycatcherTests.xctest */,
+				D91217181CB50EED00FDBC64 /* Flycatcher iOS.framework */,
+				D91217221CB50EED00FDBC64 /* FlycatcherTests iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +101,8 @@
 			children = (
 				D912171B1CB50EED00FDBC64 /* Flycatcher.h */,
 				D912171D1CB50EED00FDBC64 /* Info.plist */,
+				D91217321CB518EF00FDBC64 /* UIImageViewExtension.swift */,
+				D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */,
 			);
 			path = Flycatcher;
 			sourceTree = "<group>";
@@ -100,27 +130,29 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D91217171CB50EED00FDBC64 /* Flycatcher */ = {
+		D91217171CB50EED00FDBC64 /* Flycatcher iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D912172C1CB50EED00FDBC64 /* Build configuration list for PBXNativeTarget "Flycatcher" */;
+			buildConfigurationList = D912172C1CB50EED00FDBC64 /* Build configuration list for PBXNativeTarget "Flycatcher iOS" */;
 			buildPhases = (
+				6AAA3CFBE3F1F9FF42B5F4B4 /* 📦 Check Pods Manifest.lock */,
 				D91217131CB50EED00FDBC64 /* Sources */,
 				D91217141CB50EED00FDBC64 /* Frameworks */,
 				D91217151CB50EED00FDBC64 /* Headers */,
 				D91217161CB50EED00FDBC64 /* Resources */,
+				C38530DD87446318190A438B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Flycatcher;
+			name = "Flycatcher iOS";
 			productName = Flycatcher;
-			productReference = D91217181CB50EED00FDBC64 /* Flycatcher.framework */;
+			productReference = D91217181CB50EED00FDBC64 /* Flycatcher iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D91217211CB50EED00FDBC64 /* FlycatcherTests */ = {
+		D91217211CB50EED00FDBC64 /* FlycatcherTests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D912172F1CB50EED00FDBC64 /* Build configuration list for PBXNativeTarget "FlycatcherTests" */;
+			buildConfigurationList = D912172F1CB50EED00FDBC64 /* Build configuration list for PBXNativeTarget "FlycatcherTests iOS" */;
 			buildPhases = (
 				D912171E1CB50EED00FDBC64 /* Sources */,
 				D912171F1CB50EED00FDBC64 /* Frameworks */,
@@ -131,9 +163,9 @@
 			dependencies = (
 				D91217251CB50EED00FDBC64 /* PBXTargetDependency */,
 			);
-			name = FlycatcherTests;
+			name = "FlycatcherTests iOS";
 			productName = FlycatcherTests;
-			productReference = D91217221CB50EED00FDBC64 /* FlycatcherTests.xctest */;
+			productReference = D91217221CB50EED00FDBC64 /* FlycatcherTests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -166,8 +198,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D91217171CB50EED00FDBC64 /* Flycatcher */,
-				D91217211CB50EED00FDBC64 /* FlycatcherTests */,
+				D91217171CB50EED00FDBC64 /* Flycatcher iOS */,
+				D91217211CB50EED00FDBC64 /* FlycatcherTests iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -189,11 +221,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6AAA3CFBE3F1F9FF42B5F4B4 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C38530DD87446318190A438B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flycatcher iOS/Pods-Flycatcher iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D91217131CB50EED00FDBC64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91217331CB518EF00FDBC64 /* UIImageViewExtension.swift in Sources */,
+				D91217351CB52B1700FDBC64 /* FlycatcherEnums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +277,7 @@
 /* Begin PBXTargetDependency section */
 		D91217251CB50EED00FDBC64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D91217171CB50EED00FDBC64 /* Flycatcher */;
+			target = D91217171CB50EED00FDBC64 /* Flycatcher iOS */;
 			targetProxy = D91217241CB50EED00FDBC64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -309,29 +376,36 @@
 		};
 		D912172D1CB50EED00FDBC64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81309ACDEAAF15A2B5C3B462 /* Pods-Flycatcher iOS.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Flycatcher/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.capibara.Flycatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D912172E1CB50EED00FDBC64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86B066C123D40DB41660FF93 /* Pods-Flycatcher iOS.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Flycatcher/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.capibara.Flycatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,21 +445,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D912172C1CB50EED00FDBC64 /* Build configuration list for PBXNativeTarget "Flycatcher" */ = {
+		D912172C1CB50EED00FDBC64 /* Build configuration list for PBXNativeTarget "Flycatcher iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D912172D1CB50EED00FDBC64 /* Debug */,
 				D912172E1CB50EED00FDBC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D912172F1CB50EED00FDBC64 /* Build configuration list for PBXNativeTarget "FlycatcherTests" */ = {
+		D912172F1CB50EED00FDBC64 /* Build configuration list for PBXNativeTarget "FlycatcherTests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D91217301CB50EED00FDBC64 /* Debug */,
 				D91217311CB50EED00FDBC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,8 +1,0 @@
-# Quick
-git "https://github.com/Quick/Quick.git"
-
-# Nimble
-git "https://github.com/Quick/Nimble.git"
-
-# Alamofire
-git "https://github.com/Alamofire/Alamofire.git"
