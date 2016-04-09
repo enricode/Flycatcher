@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIImageView {
-  func setAsyncImage(url url: NSURL, placeholder: UIImage? = nil, options: Set<ImageDownloadOptions>? = nil) {
+  /*func setAsyncImage(url url: NSURL, placeholder: UIImage? = nil, options: Set<ImageDownloadOptions>? = nil) {
     
-  }
+  }*/
 }
