@@ -11,16 +11,28 @@
 		5A23E2EC908D3925BBACA0A9 /* Pods_FlycatcherTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD7FD0E0AA968FA36E552D4 /* Pods_FlycatcherTests_iOS.framework */; };
 		D912171C1CB50EED00FDBC64 /* Flycatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D912171B1CB50EED00FDBC64 /* Flycatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D91217231CB50EED00FDBC64 /* Flycatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91217181CB50EED00FDBC64 /* Flycatcher.framework */; };
-		D91217331CB518EF00FDBC64 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217321CB518EF00FDBC64 /* UIImageViewExtension.swift */; };
+		D91217331CB518EF00FDBC64 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217321CB518EF00FDBC64 /* UIImageView.swift */; };
 		D91217351CB52B1700FDBC64 /* FlycatcherEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */; };
 		D912173C1CB541F000FDBC64 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173B1CB541F000FDBC64 /* DownloadManager.swift */; };
 		D912173E1CB5420800FDBC64 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173D1CB5420800FDBC64 /* DownloadOperation.swift */; };
 		D91217401CB5426A00FDBC64 /* FlycatcherResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */; };
-		D91217421CB5428300FDBC64 /* CachingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217411CB5428300FDBC64 /* CachingManager.swift */; };
+		D91217421CB5428300FDBC64 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217411CB5428300FDBC64 /* Cacher.swift */; };
+		D92BAD841CBD404D008A1002 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173D1CB5420800FDBC64 /* DownloadOperation.swift */; };
+		D92BAD851CBD40D3008A1002 /* FlycatcherStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */; };
+		D92BAD861CBD40D9008A1002 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F51CBBA6F1000807CD /* Downloader.swift */; };
+		D92BAD871CBD40E0008A1002 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217411CB5428300FDBC64 /* Cacher.swift */; };
+		D92BAD891CBE33A2008A1002 /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD881CBE33A2008A1002 /* NSURL.swift */; };
+		D92BAD8B1CBE4999008A1002 /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD881CBE33A2008A1002 /* NSURL.swift */; };
+		D92BAD8D1CBE6F07008A1002 /* NSOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8C1CBE6F07008A1002 /* NSOperationQueue.swift */; };
+		D92BAD8F1CBE85F9008A1002 /* Completor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8E1CBE85F9008A1002 /* Completor.swift */; };
+		D92BAD901CBE9317008A1002 /* NSOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8C1CBE6F07008A1002 /* NSOperationQueue.swift */; };
+		D92BAD911CBE931F008A1002 /* Completor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8E1CBE85F9008A1002 /* Completor.swift */; };
+		D92BADA01CBEB287008A1002 /* ResourcesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD9F1CBEB287008A1002 /* ResourcesCache.swift */; };
+		D92BADA11CBEB2EC008A1002 /* ResourcesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD9F1CBEB287008A1002 /* ResourcesCache.swift */; };
 		D9661CD01CB6AB0F00B009EE /* UIImageViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217391CB53FCA00FDBC64 /* UIImageViewExtensionTests.swift */; };
 		D9661CD11CB6AB0F00B009EE /* DownloadManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912178F1CB69A7000FDBC64 /* DownloadManagerTests.swift */; };
 		D9BD46321CB7A9D000044548 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173B1CB541F000FDBC64 /* DownloadManager.swift */; };
-		D9BD46351CB7BCC600044548 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BD46341CB7BCC600044548 /* UIImageExtension.swift */; };
+		D9BD46351CB7BCC600044548 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BD46341CB7BCC600044548 /* UIImage.swift */; };
 		D9E000EA1CB8418A000807CD /* FlycatcherResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */; };
 		D9E000EC1CB8FA53000807CD /* FlycatcherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */; };
 		D9E000EE1CB90279000807CD /* Flycatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000ED1CB90279000807CD /* Flycatcher.swift */; };
@@ -28,6 +40,8 @@
 		D9E000F01CB912EA000807CD /* FlycatcherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */; };
 		D9E000F11CB91308000807CD /* FlycatcherEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */; };
 		D9E000F41CB91D6D000807CD /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = D9E000F31CB91D6D000807CD /* Resources */; };
+		D9E000F61CBBA6F1000807CD /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F51CBBA6F1000807CD /* Downloader.swift */; };
+		D9E000F91CBBB97B000807CD /* FlycatcherStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,20 +66,26 @@
 		D91217221CB50EED00FDBC64 /* FlycatcherTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FlycatcherTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91217271CB50EED00FDBC64 /* FlycatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlycatcherTests.swift; sourceTree = "<group>"; };
 		D91217291CB50EED00FDBC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D91217321CB518EF00FDBC64 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		D91217321CB518EF00FDBC64 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherEnums.swift; sourceTree = "<group>"; };
 		D91217391CB53FCA00FDBC64 /* UIImageViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensionTests.swift; sourceTree = "<group>"; };
 		D912173B1CB541F000FDBC64 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		D912173D1CB5420800FDBC64 /* DownloadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadOperation.swift; sourceTree = "<group>"; };
 		D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherResource.swift; sourceTree = "<group>"; };
-		D91217411CB5428300FDBC64 /* CachingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachingManager.swift; sourceTree = "<group>"; };
+		D91217411CB5428300FDBC64 /* Cacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
 		D912178F1CB69A7000FDBC64 /* DownloadManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManagerTests.swift; sourceTree = "<group>"; };
+		D92BAD881CBE33A2008A1002 /* NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURL.swift; sourceTree = "<group>"; };
+		D92BAD8C1CBE6F07008A1002 /* NSOperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSOperationQueue.swift; sourceTree = "<group>"; };
+		D92BAD8E1CBE85F9008A1002 /* Completor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Completor.swift; sourceTree = "<group>"; };
+		D92BAD9F1CBEB287008A1002 /* ResourcesCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesCache.swift; sourceTree = "<group>"; };
 		D9661CD21CB6ABDF00B009EE /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework"; sourceTree = "<group>"; };
 		D9661CD31CB6ABDF00B009EE /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Quick/Quick.framework"; sourceTree = "<group>"; };
-		D9BD46341CB7BCC600044548 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		D9BD46341CB7BCC600044548 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherResult.swift; sourceTree = "<group>"; };
 		D9E000ED1CB90279000807CD /* Flycatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flycatcher.swift; sourceTree = "<group>"; };
 		D9E000F31CB91D6D000807CD /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		D9E000F51CBBA6F1000807CD /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherStructs.swift; sourceTree = "<group>"; };
 		DDD7FD0E0AA968FA36E552D4 /* Pods_FlycatcherTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlycatcherTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,11 +160,15 @@
 				D9BD46331CB7BCBB00044548 /* Extensions */,
 				D9E000ED1CB90279000807CD /* Flycatcher.swift */,
 				D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */,
+				D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */,
 				D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */,
 				D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */,
 				D912173B1CB541F000FDBC64 /* DownloadManager.swift */,
+				D91217411CB5428300FDBC64 /* Cacher.swift */,
+				D9E000F51CBBA6F1000807CD /* Downloader.swift */,
 				D912173D1CB5420800FDBC64 /* DownloadOperation.swift */,
-				D91217411CB5428300FDBC64 /* CachingManager.swift */,
+				D92BAD8E1CBE85F9008A1002 /* Completor.swift */,
+				D92BAD9F1CBEB287008A1002 /* ResourcesCache.swift */,
 			);
 			path = Flycatcher;
 			sourceTree = "<group>";
@@ -164,8 +188,10 @@
 		D9BD46331CB7BCBB00044548 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D91217321CB518EF00FDBC64 /* UIImageViewExtension.swift */,
-				D9BD46341CB7BCC600044548 /* UIImageExtension.swift */,
+				D91217321CB518EF00FDBC64 /* UIImageView.swift */,
+				D9BD46341CB7BCC600044548 /* UIImage.swift */,
+				D92BAD881CBE33A2008A1002 /* NSURL.swift */,
+				D92BAD8C1CBE6F07008A1002 /* NSOperationQueue.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -378,15 +404,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E000F91CBBB97B000807CD /* FlycatcherStructs.swift in Sources */,
+				D9E000F61CBBA6F1000807CD /* Downloader.swift in Sources */,
+				D92BADA01CBEB287008A1002 /* ResourcesCache.swift in Sources */,
 				D91217401CB5426A00FDBC64 /* FlycatcherResource.swift in Sources */,
 				D9E000EE1CB90279000807CD /* Flycatcher.swift in Sources */,
 				D912173E1CB5420800FDBC64 /* DownloadOperation.swift in Sources */,
-				D91217331CB518EF00FDBC64 /* UIImageViewExtension.swift in Sources */,
+				D92BAD8F1CBE85F9008A1002 /* Completor.swift in Sources */,
+				D91217331CB518EF00FDBC64 /* UIImageView.swift in Sources */,
+				D92BAD8D1CBE6F07008A1002 /* NSOperationQueue.swift in Sources */,
+				D92BAD891CBE33A2008A1002 /* NSURL.swift in Sources */,
 				D91217351CB52B1700FDBC64 /* FlycatcherEnums.swift in Sources */,
 				D912173C1CB541F000FDBC64 /* DownloadManager.swift in Sources */,
 				D9E000EC1CB8FA53000807CD /* FlycatcherResult.swift in Sources */,
-				D91217421CB5428300FDBC64 /* CachingManager.swift in Sources */,
-				D9BD46351CB7BCC600044548 /* UIImageExtension.swift in Sources */,
+				D91217421CB5428300FDBC64 /* Cacher.swift in Sources */,
+				D9BD46351CB7BCC600044548 /* UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,10 +426,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92BAD861CBD40D9008A1002 /* Downloader.swift in Sources */,
+				D92BAD851CBD40D3008A1002 /* FlycatcherStructs.swift in Sources */,
+				D92BADA11CBEB2EC008A1002 /* ResourcesCache.swift in Sources */,
 				D9E000EF1CB9035D000807CD /* Flycatcher.swift in Sources */,
 				D9E000EA1CB8418A000807CD /* FlycatcherResource.swift in Sources */,
+				D92BAD901CBE9317008A1002 /* NSOperationQueue.swift in Sources */,
+				D92BAD911CBE931F008A1002 /* Completor.swift in Sources */,
 				D9E000F11CB91308000807CD /* FlycatcherEnums.swift in Sources */,
+				D92BAD841CBD404D008A1002 /* DownloadOperation.swift in Sources */,
+				D92BAD8B1CBE4999008A1002 /* NSURL.swift in Sources */,
 				D9661CD01CB6AB0F00B009EE /* UIImageViewExtensionTests.swift in Sources */,
+				D92BAD871CBD40E0008A1002 /* Cacher.swift in Sources */,
 				D9BD46321CB7A9D000044548 /* DownloadManager.swift in Sources */,
 				D9661CD11CB6AB0F00B009EE /* DownloadManagerTests.swift in Sources */,
 				D9E000F01CB912EA000807CD /* FlycatcherResult.swift in Sources */,
@@ -419,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -457,6 +498,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -468,6 +510,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -499,6 +542,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

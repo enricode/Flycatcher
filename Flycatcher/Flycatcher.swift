@@ -20,7 +20,8 @@ class Flycatcher {
   }
   
   class func clearAllResourcesCache() {
-    
+    clearAllDiskCache()
+    clearAllInMemoryCache()
   }
   
   class func clearAllDiskCache() {
@@ -28,6 +29,6 @@ class Flycatcher {
   }
   
   class func clearAllInMemoryCache() {
-    
+    ResourcesCache.instance.resetCache()
   }
 }

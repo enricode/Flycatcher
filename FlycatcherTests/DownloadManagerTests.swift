@@ -97,9 +97,9 @@ class DownloadManagerTests: QuickSpec {
         
         // Check download time
         if dog != nil {
-          expect(bread!.downloadedAt.doubleValue).to(beLessThanOrEqualTo(koala!.downloadedAt.doubleValue))
-          expect(koala!.downloadedAt.doubleValue).to(beLessThanOrEqualTo(cat!.downloadedAt.doubleValue))
-          expect(cat!.downloadedAt.doubleValue).to(beLessThanOrEqualTo(dog!.downloadedAt.doubleValue))
+          expect(bread!.downloadedAt!.doubleValue).to(beLessThanOrEqualTo(koala!.downloadedAt!.doubleValue))
+          expect(koala!.downloadedAt!.doubleValue).to(beLessThanOrEqualTo(cat!.downloadedAt!.doubleValue))
+          expect(cat!.downloadedAt!.doubleValue).to(beLessThanOrEqualTo(dog!.downloadedAt!.doubleValue))
         }
       }
       
@@ -117,7 +117,7 @@ class DownloadManagerTests: QuickSpec {
         if breadCached != nil {
           expect(breadDownloaded!.isFromCache).to(beFalse())
           expect(breadCached!.isFromCache).to(beTrue())
-          expect(breadDownloaded!.downloadedAt.doubleValue).to(equal(breadCached!.downloadedAt.doubleValue))
+          expect(breadDownloaded!.downloadedAt!.doubleValue).to(equal(breadCached!.downloadedAt!.doubleValue))
         }
       }
       

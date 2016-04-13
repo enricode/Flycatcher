@@ -9,7 +9,7 @@
 import UIKit
 
 enum FlycatcherResult {
-  case Error() //TODO: error kind
+  case Error(FlycatcherError)
   case Success(FlycatcherResource)
   
   var image: UIImage? {

@@ -10,18 +10,34 @@ import Foundation
 
 struct FlycatcherResource {
   // URLs of resource
-  let resourceURL: String
-  let sanitizedResourceURL: NSURL
+  let resourceURL: NSURL
+  var normalizedURL: NSURL?
   
   // Creation date
-  let downloadedAt: NSDate
+  var downloadedAt: NSDate?
   
   // Caching variables
-  let cachingPolicy: CacheStoragePolicy
-  let cachingCondition: CacheConditionPolicy
+  var cachingPolicy: CacheStoragePolicy = .Memory
+  var cachingCondition: CacheConditionPolicy = .NoCondition
   var isFromCache = false
   var isCached = false
   
-  // Concrete resouce
-  let resourceData: NSData?
+  // Concrete resource
+  var resourceData: NSData?
+  
+  // Options
+  var cellularDataAllowed = true
+  var downloadTimeout: Int16 = 25
+  
+  // Callbacks
+  var progress: ((DownloadProgress) -> ())?
+  var completion: ((FlycatcherResult) -> ())?
+  
+  init(url: NSURL) {
+    resourceURL = url
+    
+    normalizedURL = nil
+    downloadedAt = nil
+    resourceData = nil
+  }
 }
