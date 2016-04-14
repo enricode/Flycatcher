@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HJw-JM-LVX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5gK-d3-872">
+            <objects>
+                <navigationController id="HJw-JM-LVX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kRE-gv-f9S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VAN-7U-eeS" kind="relationship" relationship="rootViewController" id="S8M-4h-wdg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIL-CU-YNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="355"/>
+        </scene>
+        <!--Flycatcher-->
+        <scene sceneID="UPI-0L-0bU">
+            <objects>
+                <tableViewController id="VAN-7U-eeS" customClass="RandomViewController" customModule="Flycatcher_Demo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="224" sectionHeaderHeight="28" sectionFooterHeight="28" id="FWl-zh-BAc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Tweet" rowHeight="224" id="oBd-5B-ZeL" userLabel="Picture">
+                                <rect key="frame" x="0.0" y="92" width="375" height="224"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oBd-5B-ZeL" id="dvG-tv-kRu">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rCV-7m-WxQ">
+                                            <rect key="frame" x="3" y="8" width="368" height="207"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rCV-7m-WxQ" firstAttribute="leading" secondItem="dvG-tv-kRu" secondAttribute="leading" id="3Pa-rB-mSt"/>
+                                        <constraint firstItem="rCV-7m-WxQ" firstAttribute="top" secondItem="dvG-tv-kRu" secondAttribute="top" id="AVE-3o-aJc"/>
+                                        <constraint firstAttribute="trailing" secondItem="rCV-7m-WxQ" secondAttribute="trailing" id="LOv-Li-8QV"/>
+                                        <constraint firstAttribute="bottom" secondItem="rCV-7m-WxQ" secondAttribute="bottom" id="YN1-CY-YIE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VAN-7U-eeS" id="8mq-oS-bK1"/>
+                            <outlet property="delegate" destination="VAN-7U-eeS" id="ccW-et-2t3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Flycatcher" id="U3B-xU-1po">
+                        <barButtonItem key="rightBarButtonItem" title="Load URLs" id="mYp-pW-hnd">
+                            <connections>
+                                <segue destination="eUC-Dv-sCA" kind="presentation" id="xbp-Ne-raO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Jr-96-YUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415" y="355"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="90d-Xz-e8Y">
+            <objects>
+                <viewController id="eUC-Dv-sCA" customClass="LoadingViewController" customModule="Flycatcher_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uRX-ef-7OF"/>
+                        <viewControllerLayoutGuide type="bottom" id="UaE-T3-PcS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pyb-Np-Grg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1Aj-wz-2j2">
+                                <rect key="frame" x="170" y="316" width="37" height="37"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tas-8h-930">
+                                <rect key="frame" x="62" y="224" width="254" height="55"/>
+                                <string key="text">Loading URLs.
+Images will be loaded after.</string>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 / 25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o87-8C-shB">
+                                <rect key="frame" x="157" y="400" width="63" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o87-8C-shB" firstAttribute="top" secondItem="1Aj-wz-2j2" secondAttribute="bottom" constant="47" id="1d2-ie-QyE"/>
+                            <constraint firstItem="1Aj-wz-2j2" firstAttribute="centerX" secondItem="Tas-8h-930" secondAttribute="centerX" id="Atp-i6-9xx"/>
+                            <constraint firstItem="o87-8C-shB" firstAttribute="centerX" secondItem="1Aj-wz-2j2" secondAttribute="centerX" id="JME-AB-22I"/>
+                            <constraint firstItem="1Aj-wz-2j2" firstAttribute="centerX" secondItem="Pyb-Np-Grg" secondAttribute="centerX" id="MON-PU-Hy0"/>
+                            <constraint firstItem="1Aj-wz-2j2" firstAttribute="centerY" secondItem="Pyb-Np-Grg" secondAttribute="centerY" id="mDq-eU-vFW"/>
+                            <constraint firstItem="1Aj-wz-2j2" firstAttribute="top" secondItem="Tas-8h-930" secondAttribute="bottom" constant="37" id="vvL-Ny-2DR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressLabel" destination="o87-8C-shB" id="q9t-tB-A91"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44G-JB-8t9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121" y="355"/>
+        </scene>
+    </scenes>
+</document>

@@ -17,15 +17,13 @@ class ResourcesCache {
   }
   
   func add(resource resource: FlycatcherResource) {
-    guard let data = resource.resourceData, let url = resource.normalizedURL else {
-      return
+    if let data = resource.resourceData, let url = resource.normalizedURL {
+      ResourcesCache.cache.setObject(data.copy(), forKey: url.absoluteString, cost: data.length)
     }
-    
-    ResourcesCache.cache.setObject(data, forKey: url.absoluteString, cost: data.length)
   }
   
   func get(url url: NSURL) -> NSData? {
-    let data = ResourcesCache.cache.objectForKey(url.normalizedURL) as? NSData
+    let data = ResourcesCache.cache.objectForKey(url.absoluteString) as? NSData
     
     return data
   }

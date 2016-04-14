@@ -5,6 +5,10 @@ target 'Flycatcher iOS' do
   
 end
 
+target 'Flycatcher Demo' do
+  
+end
+
 target 'FlycatcherTests iOS' do
   pod 'Quick', :git => 'https://github.com/Quick/Quick.git'
   pod 'Nimble', :git => 'https://github.com/Quick/Nimble.git'
