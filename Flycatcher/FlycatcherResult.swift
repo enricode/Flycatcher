@@ -9,7 +9,7 @@
 import UIKit
 
 enum FlycatcherResult {
-  case Error(FlycatcherError)
+  case Error(FlycatcherResource, FlycatcherError)
   case Success(FlycatcherResource)
   
   var image: UIImage? {
@@ -25,12 +25,12 @@ enum FlycatcherResult {
     }
   }
   
-  var resource: FlycatcherResource? {
+  var resource: FlycatcherResource {
     switch self {
     case .Success(let resource):
       return resource
-    default:
-      return nil
+    case .Error(let resource, _):
+      return resource
     }
   }
 }

@@ -9,22 +9,12 @@
 import Foundation
 
 struct Completor: FlycatcherRequestHandler {
-  func successor(resource: FlycatcherResource) -> FlycatcherRequestHandler? {
+  func nextSuccessor() -> FlycatcherRequestHandler? {
     return nil
   }
   
-  func handle(resource: FlycatcherResource) {
-    var result: FlycatcherResult!
-    
-    if resource.resourceData == nil {
-      result = FlycatcherResult.Error(.InvalidURL)
-    }
-    
-    if result == nil {
-      result = FlycatcherResult.Success(resource)
-    }
-    
-    if let completion = resource.completion {
+  func handle(result: FlycatcherResult) {
+    if let completion = result.resource.completion {
       completion(result)
     }
   }

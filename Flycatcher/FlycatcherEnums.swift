@@ -74,4 +74,7 @@ enum CacheConditionPolicy {
 
 enum FlycatcherError {
   case InvalidURL
+  case ResourceNotFound
+  case ServerError
+  case LoadCanceled
 }

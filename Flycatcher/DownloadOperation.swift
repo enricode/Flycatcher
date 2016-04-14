@@ -26,6 +26,7 @@ protocol DownloadOperationLifecycleProtocol {
 
 class DownloadOperation: NSOperation, DownloadOperationLifecycleProtocol {
   var resource: FlycatcherResource!
+  var acquaintanceResources: [FlycatcherResource] = []
   var result: FlycatcherResult!
   
   var expectedSize: Int = 0
@@ -108,13 +109,20 @@ class DownloadOperation: NSOperation, DownloadOperationLifecycleProtocol {
   }
   
   func loadCancelled() {
-    state = .Cancelled
+    if self.result == nil {
+      self.result = .Error(self.resource, .LoadCanceled)
+    }
+    
+    state = .Finished
   }
 }
 
 class FlycatcherDownloadOperation: DownloadOperation, DownloadOperationProtocol {
   var sessionDataTask: NSURLSessionDataTask!
   var receivedData: NSMutableData?
+  
+    /// The last time that the same resource is being requested
+  var touched: NSDate = NSDate()
   
   var resourceSize: DownloadProgress? {
     didSet {
@@ -138,7 +146,8 @@ class FlycatcherDownloadOperation: DownloadOperation, DownloadOperationProtocol 
     guard let downloadURL = resource.normalizedURL else {
       debugPrint("Cannot download resource. The URL is nil")
       
-      result = .Error(.InvalidURL)
+      result = .Error(resource, .InvalidURL)
+      loadCancelled()
       loadFinished()
       
       return
@@ -158,8 +167,8 @@ class FlycatcherDownloadOperation: DownloadOperation, DownloadOperationProtocol 
   }
   
   override func main() {
-    sessionDataTask.resume()
     self.loadStarted()
+    sessionDataTask.resume()
   }
   
   func cancelLoad() {
@@ -191,7 +200,28 @@ extension FlycatcherDownloadOperation: NSURLSessionDataDelegate {
     // If the resource is already present, this means it's a new response
     receivedData = NSMutableData()
     resourceSize = DownloadProgress(total: response.expectedContentLength ?? NSURLSessionTransferSizeUnknown, current: 0)
-    print("begin download \(resource.normalizedURL?.absoluteString)")
-    completionHandler(NSURLSessionResponseDisposition.Allow)
+    
+    if let httpResponse = (response as? NSHTTPURLResponse) {
+      switch httpResponse.statusCode {
+      case 200...299:
+        completionHandler(.Allow)
+      case 300...399:
+        completionHandler(.Allow)
+      case 400...499:
+        result = .Error(resource, .ResourceNotFound)
+        state = .Cancelled
+        state = .Finished
+        
+        completionHandler(.Cancel)
+      case 500...599:
+        result = .Error(resource, .ServerError)
+        state = .Cancelled
+        state = .Finished
+        
+        completionHandler(.Cancel)
+      default:
+        completionHandler(.Allow)
+      }
+    }
   }
 }

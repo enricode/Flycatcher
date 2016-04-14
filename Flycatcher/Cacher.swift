@@ -9,47 +9,47 @@
 import Foundation
 
 struct Cacher: FlycatcherRequestHandler {
-  let loader: CacheLoader!
-  let saver: CacheSaver!
+  var result: FlycatcherResult?
   
-  init() {
-    loader = CacheLoader()
-    saver = CacheSaver()
+  mutating func handle(result: FlycatcherResult) {
+    self.result = result
+    
+    successor.handle(result)
   }
   
-  func handle(resource: FlycatcherResource) {
-    if let successor = successor(resource) {
-      successor.handle(resource)
+  func nextSuccessor() -> FlycatcherRequestHandler? {
+    guard let result = self.result else {
+      return nil
     }
-  }
-  
-  func successor(resource: FlycatcherResource) -> FlycatcherRequestHandler? {
-    if resource.resourceData != nil {
-      return saver
-    }
-    else {
-      return loader
+    
+    switch result {
+    case .Success(let resource):
+      if resource.resourceData != nil {
+        return CacheSaver()
+      }
+      else {
+        return CacheLoader()
+      }
+    case .Error:
+      return nil
     }
   }
 }
 
 struct CacheSaver: FlycatcherRequestHandler {
-  func handle(resource: FlycatcherResource) {
-    // Save fresh
-    ResourcesCache.instance.add(resource: resource)
+  mutating func handle(result: FlycatcherResult) {
+    ResourcesCache.instance.add(resource: result.resource)
     
-    if let successor = successor(resource) {
-      successor.handle(resource)
-    }
+    successor.handle(result)
   }
   
-  func successor(resource: FlycatcherResource) -> FlycatcherRequestHandler? {
-    return Completor()
+  func nextSuccessor() -> FlycatcherRequestHandler? {
+    return nil
   }
 }
 
 struct CacheLoader: FlycatcherRequestHandler {
-  let downloader = Downloader()
+  let downloader = Downloader.instance
   lazy var libraryLocation: NSURL = {
     let urls = NSFileManager.defaultManager().URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask)
     let libraryDirectory = urls.last
@@ -57,41 +57,30 @@ struct CacheLoader: FlycatcherRequestHandler {
     return libraryDirectory!
   }()
   
-  func handle(resource: FlycatcherResource) {
-    var res = resource
-    let urlToLoad = res.normalizedURL
+  mutating func handle(result: FlycatcherResult) {
+    var resource = result.resource
     
-    if let data = dataAt(urlToLoad!, onDisk: res.cachingPolicy == .OnDisk) where res.cachingPolicy != .None {
-      res.resourceData = data
-      res.isCached = true
+    if let data = dataAt(resource.normalizedURL!, onDisk: resource.cachingPolicy == .OnDisk) where resource.cachingPolicy != .None {
+      resource.resourceData = data
+      resource.isCached = true
     }
     
-    if let successor = self.successor(resource) {
-      res.isFromCache = true
-      successor.handle(res)
-    }
-    else {
-      if let completion = res.completion {
-        completion(FlycatcherResult.Success(res))
-      }
-    }
+    resource.isFromCache = true
+    
+    successor.handle(.Success(resource))
   }
   
-  func successor(resource: FlycatcherResource) -> FlycatcherRequestHandler? {
-    if resource.resourceData != nil || resource.downloadedAt != nil {
-      return Completor()
-    }
-    else {
-      return downloader
-    }
+  func nextSuccessor() -> FlycatcherRequestHandler? {
+    return downloader
   }
   
-  func dataAt(url: NSURL, onDisk: Bool = true) -> NSData? {
+  private func dataAt(url: NSURL, onDisk: Bool = true) -> NSData? {
     // Seach in memory
     if let data = ResourcesCache.instance.get(url: url) {
       return data
     }
     
+    //TODO: disk caching
     if onDisk {
       let directoriesFilename = url.directoryTreeAndFileName
     }
