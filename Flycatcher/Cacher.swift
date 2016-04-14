@@ -82,7 +82,7 @@ struct CacheLoader: FlycatcherRequestHandler {
     
     //TODO: disk caching
     if onDisk {
-      let directoriesFilename = url.directoryTreeAndFileName
+      //let directoriesFilename = url.directoryTreeAndFileName
     }
     
     //FIXME: returning always nil

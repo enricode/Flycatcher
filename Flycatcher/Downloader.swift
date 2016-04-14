@@ -24,7 +24,7 @@ class Downloader {
 extension Downloader: FlycatcherRequestHandler {
   func handle(result: FlycatcherResult) {
     // Update download manager
-    operationQueue.maxConcurrentOperationCount = Flycatcher.manager().concurrencyLevel
+    operationQueue.maxConcurrentOperationCount = Flycatcher.downloader().concurrencyLevel
     
     // Check if the download is needed
     guard result.resource.resourceData == nil else {

@@ -27,7 +27,7 @@ class DownloadManagerTests: QuickSpec {
   
   override func spec() {
     beforeEach { 
-      self.manager = Flycatcher.manager()
+      self.manager = Flycatcher.downloader()
     }
     
     describe("download manager") {

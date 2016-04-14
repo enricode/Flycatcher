@@ -21,6 +21,7 @@ enum ResourceDownloadOptions {
   case PreciseURL
   case DisableCellularData
   case DownloadTimeout(Int16)
+  case RemoveFadeIn
 }
 
 extension ResourceDownloadOptions: Hashable {
@@ -32,6 +33,8 @@ extension ResourceDownloadOptions: Hashable {
       return 2
     case .DownloadTimeout(_):
       return 3
+    case .RemoveFadeIn:
+      return 4
     }
   }
 }

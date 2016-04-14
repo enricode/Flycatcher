@@ -6,7 +6,7 @@
 //  Copyright © 2016 Capibara. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol FlycatcherRequestHandler {
   mutating func handle(result: FlycatcherResult)
@@ -36,8 +36,18 @@ class Flycatcher {
     return DownloadManager()
   }()
   
-  class func manager() -> DownloadManager {
+  private lazy var imageViewManager: FlycatcherImageViewManager = {
+    return FlycatcherImageViewManager()
+  }()
+  
+  var backgroundImageViewColor = UIColor(white: 230.0/255.0, alpha: 1)
+  
+  class func downloader() -> DownloadManager {
     return Flycatcher.sharedInstance.downloadManager
+  }
+
+  class func imager() -> FlycatcherImageViewManager {
+    return Flycatcher.sharedInstance.imageViewManager
   }
   
   class func clearAllResourcesCache() {
