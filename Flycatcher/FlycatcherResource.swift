@@ -6,7 +6,7 @@
 //  Copyright © 2016 Capibara. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct FlycatcherResource {
   // URLs of resource
@@ -16,28 +16,16 @@ struct FlycatcherResource {
   // Creation date
   var downloadedAt: NSDate?
   
-  // Caching variables
-  var cachingPolicy: CacheStoragePolicy = .Memory
-  var cachingCondition: CacheConditionPolicy = .NoCondition
+  // Cache
   var isFromCache = false
   var isCached = false
-  
+  var immediateShow = false
+
   // Concrete resource
   var resourceData: NSData?
-  
-  // Options
-  var cellularDataAllowed = true
-  var downloadTimeout: Int16 = 25
-  
-  // Callbacks
-  var progress: ((DownloadProgress) -> ())?
-  var completion: ((FlycatcherResult) -> ())?
-  
+  var resourceImage: UIImage?
+ 
   init(url: NSURL) {
     resourceURL = url
-    
-    normalizedURL = nil
-    downloadedAt = nil
-    resourceData = nil
   }
 }

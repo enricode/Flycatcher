@@ -46,11 +46,6 @@
                BlueprintName = "FlycatcherTests iOS"
                ReferencedContainer = "container:Flycatcher.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "DownloadManagerTests">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

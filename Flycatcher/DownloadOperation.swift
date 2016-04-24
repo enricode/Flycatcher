@@ -25,55 +25,47 @@ protocol DownloadOperationLifecycleProtocol {
 
 
 class DownloadOperation: NSOperation, DownloadOperationLifecycleProtocol {
-  var resource: FlycatcherResource!
-  var acquaintanceResources: [FlycatcherResource] = []
+  var request: FlycatcherRequest!
   var result: FlycatcherResult!
+  var acquaintanceRequests: [FlycatcherRequest] = []
   
   var expectedSize: Int = 0
   var currentSize: Int = 0
-  
-  enum State {
-    case Ready, Executing, Finished, Cancelled
-    
-    func keyPath() -> String {
-      switch self {
-      case Ready:
-        return "isReady"
-      case Executing:
-        return "isExecuting"
-      case Finished:
-        return "isFinished"
-      case Cancelled:
-        return "isCancelled"
-      }
-    }
-  }
-  
-  var state = State.Ready {
+
+  private var _ready = false {
     willSet {
-      willChangeValueForKey(newValue.keyPath())
-      willChangeValueForKey(state.keyPath())
+      willChangeValueForKey("isReady")
     }
     didSet {
-      didChangeValueForKey(oldValue.keyPath())
-      didChangeValueForKey(state.keyPath())
+      didChangeValueForKey("isReady")
     }
   }
-  
   override var ready: Bool {
-    return super.ready && state == .Ready
+    return _ready
   }
   
+  private var _executing = false {
+    willSet {
+      willChangeValueForKey("isExecuting")
+    }
+    didSet {
+      didChangeValueForKey("isExecuting")
+    }
+  }
   override var executing: Bool {
-    return state == .Executing
+    return _executing
   }
   
+  private var _finished = false {
+    willSet {
+      willChangeValueForKey("isFinished")
+    }
+    didSet {
+      didChangeValueForKey("isFinished")
+    }
+  }
   override var finished: Bool {
-    return state == .Finished
-  }
-  
-  override var cancelled: Bool {
-    return state == .Cancelled
+    return self.cancelled == true ? true : _finished
   }
   
   override var asynchronous: Bool {
@@ -84,36 +76,33 @@ class DownloadOperation: NSOperation, DownloadOperationLifecycleProtocol {
     super.init()
   }
   
-  init(resource: FlycatcherResource) {
+  init(request: FlycatcherRequest) {
     super.init()
     
-    self.resource = resource
+    self.request = request
   }
   
   func loadProgress(progress: DownloadProgress) {
-    if let progressClosure = resource.progress {
+    if let progressClosure = request.progress {
       progressClosure(progress)
     }
   }
   
   func loadReady() {
-    state = .Ready
+    _ready = true
   }
   
   func loadStarted() {
-    state = .Executing
+    _executing = true
   }
   
   func loadFinished() {
-    state = .Finished
+    _finished = true
   }
   
   func loadCancelled() {
-    if self.result == nil {
-      self.result = .Error(self.resource, .LoadCanceled)
-    }
-    
-    state = .Finished
+    self.result = .Error(self.request.partialResult.resource, .LoadCanceled)
+    cancel()
   }
 }
 
@@ -121,18 +110,19 @@ class FlycatcherDownloadOperation: DownloadOperation, DownloadOperationProtocol 
   var sessionDataTask: NSURLSessionDataTask!
   var receivedData: NSMutableData?
   
-    /// The last time that the same resource is being requested
+  /// The last time that the resource has been requested
   var touched: NSDate = NSDate()
   
   var resourceSize: DownloadProgress? {
     didSet {
       // Has finished?
       if resourceSize?.current == resourceSize?.total {
+        var resource = self.request.partialResult.resource
         resource.resourceData = receivedData
+        resource.downloadedAt = NSDate(timeIntervalSinceNow: 0)
         
         // Tell the operation to conclude
         result = .Success(resource)
-        
         loadFinished()
       }
       else {
@@ -141,34 +131,59 @@ class FlycatcherDownloadOperation: DownloadOperation, DownloadOperationProtocol 
     }
   }
   
+  override init(request: FlycatcherRequest) {
+    super.init(request: request)
+    
+    setupLoad()
+  }
+  
+  /*override func main() {
+    if cancelled {
+      return
+    }
+    
+    self.loadStarted()
+    
+    if !cancelled {
+      sessionDataTask.resume()
+    }
+    else {
+      sessionDataTask.cancel()
+    }
+  }*/
+  
+  override func start() {
+    if cancelled {
+      loadFinished()
+      return
+    }
+    
+    sessionDataTask.resume()
+    
+    main()
+  }
+  
   func setupLoad() {
     // Normalized resource url must be present
-    guard let downloadURL = resource.normalizedURL else {
+    guard let downloadURL = self.request.partialResult.resource.normalizedURL else {
       debugPrint("Cannot download resource. The URL is nil")
       
-      result = .Error(resource, .InvalidURL)
+      result = .Error(self.request.partialResult.resource, .InvalidURL)
       loadCancelled()
-      loadFinished()
       
       return
     }
     
     // Create session and request
     let session = NSURLSession(configuration: NSURLSessionConfiguration.ephemeralSessionConfiguration(), delegate: self, delegateQueue: nil)
-    let request = NSMutableURLRequest(URL: downloadURL, cachePolicy: NSURLRequestCachePolicy.UseProtocolCachePolicy, timeoutInterval: Double(resource.downloadTimeout))
-    request.allowsCellularAccess = resource.cellularDataAllowed
+    let URLrequest = NSMutableURLRequest(URL: downloadURL, cachePolicy: NSURLRequestCachePolicy.UseProtocolCachePolicy, timeoutInterval: Double(self.request.downloadTimeout))
+    URLrequest.allowsCellularAccess = request.cellularDataAllowed
     
     // Create session data task and start connecting
-    sessionDataTask = session.dataTaskWithRequest(request)
-    sessionDataTask.resume()
+    sessionDataTask = session.dataTaskWithRequest(URLrequest)
     
     // Tell the operation that loading is started
     self.loadReady()
-  }
-  
-  override func main() {
-    self.loadStarted()
-    sessionDataTask.resume()
   }
   
   func cancelLoad() {
@@ -208,15 +223,13 @@ extension FlycatcherDownloadOperation: NSURLSessionDataDelegate {
       case 300...399:
         completionHandler(.Allow)
       case 400...499:
-        result = .Error(resource, .ResourceNotFound)
-        state = .Cancelled
-        state = .Finished
+        result = .Error(self.request.partialResult.resource, .ResourceNotFound)
+        cancel()
         
         completionHandler(.Cancel)
       case 500...599:
-        result = .Error(resource, .ServerError)
-        state = .Cancelled
-        state = .Finished
+        result = .Error(self.request.partialResult.resource, .ServerError)
+        cancel()
         
         completionHandler(.Cancel)
       default:

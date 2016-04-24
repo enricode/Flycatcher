@@ -17,6 +17,8 @@
 		D912173E1CB5420800FDBC64 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173D1CB5420800FDBC64 /* DownloadOperation.swift */; };
 		D91217401CB5426A00FDBC64 /* FlycatcherResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */; };
 		D91217421CB5428300FDBC64 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217411CB5428300FDBC64 /* Cacher.swift */; };
+		D915855C1CCD1901003A7F4E /* FlycatcherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A264501CC25CC9006102A5 /* FlycatcherRequest.swift */; };
+		D915855D1CCD1901003A7F4E /* FlycatcherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A264501CC25CC9006102A5 /* FlycatcherRequest.swift */; };
 		D92BAD841CBD404D008A1002 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173D1CB5420800FDBC64 /* DownloadOperation.swift */; };
 		D92BAD851CBD40D3008A1002 /* FlycatcherStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */; };
 		D92BAD861CBD40D9008A1002 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F51CBBA6F1000807CD /* Downloader.swift */; };
@@ -55,7 +57,8 @@
 		D92BADD11CC00298008A1002 /* NSOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8C1CBE6F07008A1002 /* NSOperationQueue.swift */; };
 		D9661CD01CB6AB0F00B009EE /* UIImageViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217391CB53FCA00FDBC64 /* UIImageViewExtensionTests.swift */; };
 		D9661CD11CB6AB0F00B009EE /* DownloadManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912178F1CB69A7000FDBC64 /* DownloadManagerTests.swift */; };
-		D9A2641C1CC0314B006102A5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A2641A1CC02F9F006102A5 /* LoadingViewController.swift */; };
+		D96DFDCB1CCCC9A400782356 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96DFDCA1CCCC9A400782356 /* Images.swift */; };
+		D9A264511CC25CC9006102A5 /* FlycatcherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A264501CC25CC9006102A5 /* FlycatcherRequest.swift */; };
 		D9BD46321CB7A9D000044548 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173B1CB541F000FDBC64 /* DownloadManager.swift */; };
 		D9BD46351CB7BCC600044548 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BD46341CB7BCC600044548 /* UIImage.swift */; };
 		D9E000EA1CB8418A000807CD /* FlycatcherResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */; };
@@ -116,7 +119,8 @@
 		D92BADBF1CBFF657008A1002 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D9661CD21CB6ABDF00B009EE /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework"; sourceTree = "<group>"; };
 		D9661CD31CB6ABDF00B009EE /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Quick/Quick.framework"; sourceTree = "<group>"; };
-		D9A2641A1CC02F9F006102A5 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		D96DFDCA1CCCC9A400782356 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		D9A264501CC25CC9006102A5 /* FlycatcherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherRequest.swift; sourceTree = "<group>"; };
 		D9BD46341CB7BCC600044548 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherResult.swift; sourceTree = "<group>"; };
 		D9E000ED1CB90279000807CD /* Flycatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flycatcher.swift; sourceTree = "<group>"; };
@@ -207,17 +211,12 @@
 			children = (
 				D912171B1CB50EED00FDBC64 /* Flycatcher.h */,
 				D9BD46331CB7BCBB00044548 /* Extensions */,
+				D9A2644F1CC25CB0006102A5 /* Request/Resource */,
+				D915855B1CCD0027003A7F4E /* Chain */,
 				D9E000ED1CB90279000807CD /* Flycatcher.swift */,
 				D92BADA51CBFCF3D008A1002 /* FlycatcherImageViewManager.swift */,
 				D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */,
 				D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */,
-				D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */,
-				D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */,
-				D912173B1CB541F000FDBC64 /* DownloadManager.swift */,
-				D91217411CB5428300FDBC64 /* Cacher.swift */,
-				D9E000F51CBBA6F1000807CD /* Downloader.swift */,
-				D912173D1CB5420800FDBC64 /* DownloadOperation.swift */,
-				D92BAD8E1CBE85F9008A1002 /* Completor.swift */,
 				D92BAD9F1CBEB287008A1002 /* ResourcesCache.swift */,
 			);
 			path = Flycatcher;
@@ -235,12 +234,24 @@
 			path = FlycatcherTests;
 			sourceTree = "<group>";
 		};
+		D915855B1CCD0027003A7F4E /* Chain */ = {
+			isa = PBXGroup;
+			children = (
+				D912173B1CB541F000FDBC64 /* DownloadManager.swift */,
+				D91217411CB5428300FDBC64 /* Cacher.swift */,
+				D9E000F51CBBA6F1000807CD /* Downloader.swift */,
+				D912173D1CB5420800FDBC64 /* DownloadOperation.swift */,
+				D92BAD8E1CBE85F9008A1002 /* Completor.swift */,
+			);
+			name = Chain;
+			sourceTree = "<group>";
+		};
 		D92BADAD1CBFEB82008A1002 /* Flycatcher Demo */ = {
 			isa = PBXGroup;
 			children = (
 				D92BADAE1CBFEB82008A1002 /* AppDelegate.swift */,
+				D96DFDCA1CCCC9A400782356 /* Images.swift */,
 				D92BADB01CBFEB82008A1002 /* RandomViewController.swift */,
-				D9A2641A1CC02F9F006102A5 /* LoadingViewController.swift */,
 				D92BADB21CBFEB82008A1002 /* Main.storyboard */,
 				D92BADB51CBFEB82008A1002 /* Assets.xcassets */,
 				D92BADBA1CBFEB82008A1002 /* Info.plist */,
@@ -248,6 +259,16 @@
 			);
 			name = "Flycatcher Demo";
 			path = Flycatcher/Demo;
+			sourceTree = "<group>";
+		};
+		D9A2644F1CC25CB0006102A5 /* Request/Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D9A264501CC25CC9006102A5 /* FlycatcherRequest.swift */,
+				D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */,
+				D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */,
+			);
+			name = Request/Resource;
 			sourceTree = "<group>";
 		};
 		D9BD46331CB7BCBB00044548 /* Extensions */ = {
@@ -556,6 +577,7 @@
 				D91217401CB5426A00FDBC64 /* FlycatcherResource.swift in Sources */,
 				D9E000EE1CB90279000807CD /* Flycatcher.swift in Sources */,
 				D912173E1CB5420800FDBC64 /* DownloadOperation.swift in Sources */,
+				D9A264511CC25CC9006102A5 /* FlycatcherRequest.swift in Sources */,
 				D92BAD8F1CBE85F9008A1002 /* Completor.swift in Sources */,
 				D91217331CB518EF00FDBC64 /* UIImageView.swift in Sources */,
 				D92BAD8D1CBE6F07008A1002 /* NSOperationQueue.swift in Sources */,
@@ -586,6 +608,7 @@
 				D9661CD01CB6AB0F00B009EE /* UIImageViewExtensionTests.swift in Sources */,
 				D92BAD871CBD40E0008A1002 /* Cacher.swift in Sources */,
 				D9BD46321CB7A9D000044548 /* DownloadManager.swift in Sources */,
+				D915855C1CCD1901003A7F4E /* FlycatcherRequest.swift in Sources */,
 				D9661CD11CB6AB0F00B009EE /* DownloadManagerTests.swift in Sources */,
 				D9E000F01CB912EA000807CD /* FlycatcherResult.swift in Sources */,
 				D92BADA71CBFCF6A008A1002 /* FlycatcherImageViewManager.swift in Sources */,
@@ -596,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D915855D1CCD1901003A7F4E /* FlycatcherRequest.swift in Sources */,
 				D92BADCD1CC00293008A1002 /* ResourcesCache.swift in Sources */,
 				D92BADCE1CC00298008A1002 /* UIImageView.swift in Sources */,
 				D92BADCA1CC00293008A1002 /* Downloader.swift in Sources */,
@@ -607,12 +631,12 @@
 				D92BADC51CC00293008A1002 /* FlycatcherStructs.swift in Sources */,
 				D92BADCF1CC00298008A1002 /* UIImage.swift in Sources */,
 				D92BADAF1CBFEB82008A1002 /* AppDelegate.swift in Sources */,
-				D9A2641C1CC0314B006102A5 /* LoadingViewController.swift in Sources */,
 				D92BADC71CC00293008A1002 /* FlycatcherResult.swift in Sources */,
 				D92BADD11CC00298008A1002 /* NSOperationQueue.swift in Sources */,
 				D92BADC61CC00293008A1002 /* FlycatcherResource.swift in Sources */,
 				D92BADC81CC00293008A1002 /* DownloadManager.swift in Sources */,
 				D92BADC41CC00293008A1002 /* FlycatcherEnums.swift in Sources */,
+				D96DFDCB1CCCC9A400782356 /* Images.swift in Sources */,
 				D92BADD01CC00298008A1002 /* NSURL.swift in Sources */,
 				D92BADCB1CC00293008A1002 /* DownloadOperation.swift in Sources */,
 			);

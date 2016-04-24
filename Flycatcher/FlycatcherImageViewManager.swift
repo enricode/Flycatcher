@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ *  This structs helps to "remember" which UIImageView has to display
+ *  the loaded image. It also check if the ImageView is stille responsible
+ *  to show the image (ex: in a Table View Cell with refresh of cells)
+ */
 struct FlycatcherImageViewManager {
   static var registry = ImageViewRegistry()
   
@@ -16,16 +21,16 @@ struct FlycatcherImageViewManager {
     FlycatcherImageViewManager.registry.add(ImageViewRegistry.Couple(imageView: imageView, url: url.absoluteString))
     
     Flycatcher.downloader().load(url, options: options, progress: nil) { [weak weakImageView = imageView] (result) in
-      // Check for image resource
-      guard let image = result.image, let imageView = weakImageView else {
+      //TODO: Check for image resource
+      /*guard let image = result.image, let imageView = weakImageView else {
         return
-      }
+      }*/
       
       // Check if imageView is still associated with url
       guard FlycatcherImageViewManager.registry.stillValid(ImageViewRegistry.Couple(imageView: imageView, url: url.absoluteString)) else {
         return
       }
-      
+      /*
       var decompressedImage: UIImage?
       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {() -> Void in
         UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
@@ -40,26 +45,26 @@ struct FlycatcherImageViewManager {
         UIGraphicsEndImageContext()
         
         // Set image in main thread
-        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in*/
           guard FlycatcherImageViewManager.registry.stillValid(ImageViewRegistry.Couple(imageView: imageView, url: url.absoluteString)) else {
             return
           }
           
           // Crossfade transition
-          if (options.contains(.RemoveFadeIn)) {
-            weakImageView?.image = decompressedImage
+          if (options.contains(.RemoveFadeIn) || result.resource.immediateShow) {
+            weakImageView?.image = result.resource.resourceImage //decompressedImage
           }
           else {
             UIView.transitionWithView(weakImageView!,
               duration: 0.25,
               options: UIViewAnimationOptions.TransitionCrossDissolve,
-              animations: { weakImageView?.image = decompressedImage },
+              animations: { weakImageView?.image = result.resource.resourceImage /* decompressedImage*/ },
               completion: nil)
           }
-          
+          /*
           FlycatcherImageViewManager.registry.remove(imageView)
         })
-      })
+      })*/
     }
   }
 }

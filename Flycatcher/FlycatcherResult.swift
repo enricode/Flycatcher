@@ -12,19 +12,6 @@ enum FlycatcherResult {
   case Error(FlycatcherResource, FlycatcherError)
   case Success(FlycatcherResource)
   
-  var image: UIImage? {
-    switch self {
-    case .Success(let resource):
-      guard let imageData = resource.resourceData else {
-        return nil
-      }
-      
-      return UIImage(data: imageData)
-    default:
-      return nil
-    }
-  }
-  
   var resource: FlycatcherResource {
     switch self {
     case .Success(let resource):

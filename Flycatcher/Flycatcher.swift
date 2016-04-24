@@ -8,27 +8,6 @@
 
 import UIKit
 
-protocol FlycatcherRequestHandler {
-  mutating func handle(result: FlycatcherResult)
-  func nextSuccessor() -> FlycatcherRequestHandler?
-}
-
-extension FlycatcherRequestHandler {
-  var successor: FlycatcherRequestHandler {
-    get {
-      if let succ = self.nextSuccessor() {
-        return succ
-      }
-      else {
-        return Completor()
-      }
-    }
-    set {
-      
-    }
-  }
-}
-
 class Flycatcher {
   static var sharedInstance = Flycatcher()
   
@@ -60,6 +39,31 @@ class Flycatcher {
   }
   
   class func clearAllInMemoryCache() {
-    ResourcesCache.instance.resetCache()
+    Cache.instance.resetCache()
+  }
+}
+
+/**
+ *  Chain of responsibility
+ */
+protocol FlycatcherRequestHandler {
+  mutating func handle(request: FlycatcherRequest)
+  func nextSuccessor() -> FlycatcherRequestHandler?
+}
+
+// If there's no successor, go to completor
+extension FlycatcherRequestHandler {
+  var successor: FlycatcherRequestHandler {
+    get {
+      if let succ = self.nextSuccessor() {
+        return succ
+      }
+      else {
+        return Completor()
+      }
+    }
+    set {
+      
+    }
   }
 }

@@ -25,7 +25,7 @@ class RandomViewController: UITableViewController, NSURLSessionDataDelegate {
     
     let imageView = cell.viewWithTag(1) as! UIImageView
     let image = imageURLs[indexPath.row]
-    imageView.setAsyncImage(url: image, placeholder: nil, options: [.RemoveFadeIn])
+    imageView.setAsyncImage(url: image)
     
     return cell
   }
@@ -40,6 +40,24 @@ class RandomViewController: UITableViewController, NSURLSessionDataDelegate {
       imageURLs.append(NSURL(string: Images()[i])!)
       return NSIndexPath(forRow: i, inSection: 0)
     }
+    
+    self.tableView.beginUpdates()
+    self.tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+    self.tableView.endUpdates()
+  }
+  
+  @IBAction func preloadImages() {
+    let current: Int = imageURLs.count
+    
+    var newPreload = [NSURL]()
+    let indexPaths = (current...current+19).map { i -> NSIndexPath in
+      let url = NSURL(string: Images()[i])!
+      imageURLs.append(url)
+      newPreload.append(url)
+      return NSIndexPath(forRow: i, inSection: 0)
+    }
+    
+    Flycatcher.downloader().preload(newPreload)
     
     self.tableView.beginUpdates()
     self.tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)

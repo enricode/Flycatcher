@@ -13,9 +13,9 @@ struct Completor: FlycatcherRequestHandler {
     return nil
   }
   
-  func handle(result: FlycatcherResult) {
-    if let completion = result.resource.completion {
-      completion(result)
+  func handle(request: FlycatcherRequest) {
+    if let completion = request.completion {
+      completion(request.partialResult)
     }
   }
 }

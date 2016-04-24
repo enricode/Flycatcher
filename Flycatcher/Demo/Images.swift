@@ -13,7 +13,6 @@ struct Images {
     "https://images.unsplash.com/photo-1444728262537-0ea9c623005d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1600&h=900&fit=crop&s=c6dbfead895658c04de7994b8e34ced4",
     "https://images.unsplash.com/photo-1430974305366-ee381412bd61?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1600&h=900&fit=crop&s=803c9bc4884a20ac583074458a84a5ae",
     "https://images.unsplash.com/photo-1431955277195-0f22b560a8e9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1600&h=900&fit=crop&s=c2fc12834a64e839a9c9cabb3563775a",
-    "https://images.unsplash.com/photo-1431955277195-0f22b560a8e9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1600&h=900&fit=crop&s=c2fc12834a64e839a9c9cabb3563775a",
     "https://images.unsplash.com/photo-1430740537271-3448563a1a7e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1600&h=900&fit=crop&s=cb1c07b9c47b97be414f9a032b183aed",
     "https://images.unsplash.com/photo-1422038963921-ee0323fbac61?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1600&h=900&fit=crop&s=ab8722a235dc838cbea9852b416b7712",
     "https://images.unsplash.com/photo-1444792075916-a3c43f13c3f3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1600&h=900&fit=crop&s=e43d5db48e7a47ecea53fc6a4184bb29",

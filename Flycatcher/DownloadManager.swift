@@ -75,7 +75,8 @@ class DownloadManager: FlycatcherDownloadManager {
   }
   
   func load(url: NSURL, options: Set<ResourceDownloadOptions>, progress: ((DownloadProgress) -> ())?, completion: ((FlycatcherResult) -> Void)?) {
-    // Construct resource
+    // CONSTRUCT REQUEST
+    // Resource
     var resource = FlycatcherResource(url: url)
     
     // Disable URL normalize
@@ -86,9 +87,15 @@ class DownloadManager: FlycatcherDownloadManager {
       resource.normalizedURL = url.normalizedURL
     }
     
+    var request = FlycatcherRequest(
+      partialResult: .Success(resource),
+      progress: progress,
+      completion: completion
+    )
+    
     // Disable cell data if needed
     if options.contains(.DisableCellularData) {
-      resource.cellularDataAllowed = false
+      request.cellularDataAllowed = false
     }
     
     // Download timeout
@@ -98,21 +105,13 @@ class DownloadManager: FlycatcherDownloadManager {
       
       switch timeout {
       case .DownloadTimeout(let timeout):
-        resource.downloadTimeout = timeout
+        request.downloadTimeout = timeout
       default: break
       }
     }
     
-    // Closures
-    if progress != nil {
-      resource.progress = progress
-    }
-    if completion != nil {
-      resource.completion = completion
-    }
-    
     // Pass to successor
-    successor.handle(.Success(resource))
+    successor.handle(request)
   }
   
   func preload(urls: [NSURL]) {
@@ -150,7 +149,7 @@ extension DownloadManager: FlycatcherRequestHandler {
     return nil
   }
   
-  func handle(result: FlycatcherResult) {
+  func handle(request: FlycatcherRequest) {
     
   }
 }

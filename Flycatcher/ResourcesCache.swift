@@ -6,30 +6,55 @@
 //  Copyright © 2016 Capibara. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class ResourcesCache {
-  static let instance = ResourcesCache()
-  private static var cache: NSCache!
+enum CacheContainer: Int {
+  case Data = 1
+  case Image = 2
+}
+
+class Cache {
+  static var instance: Cache = {
+    let cache = Cache()
+    cache.resetCache()
+    
+    return cache
+  }()
+  private var caches: [CacheContainer: NSCache]!
   
-  init() {
-    resetCache()
-  }
-  
-  func add(resource resource: FlycatcherResource) {
+  func addData(resource resource: FlycatcherResource) {
     if let data = resource.resourceData, let url = resource.normalizedURL {
-      ResourcesCache.cache.setObject(data.copy(), forKey: url.absoluteString, cost: data.length)
+      Cache.instance.caches[.Data]!.setObject(data.copy(), forKey: url.absoluteString, cost: data.length)
     }
   }
   
-  func get(url url: NSURL) -> NSData? {
-    let data = ResourcesCache.cache.objectForKey(url.absoluteString) as? NSData
-    
-    return data
+  func removeData(resource resource: FlycatcherResource) {
+    if let url = resource.normalizedURL {
+      Cache.instance.caches[.Data]!.removeObjectForKey(url.absoluteString)
+    }
+  }
+  
+  func addImage(resource resource: FlycatcherResource, image: UIImage) {
+    if let url = resource.normalizedURL {
+      Cache.instance.caches[.Image]!.setObject(image, forKey: url.absoluteString, cost: Int(image.size.height * image.size.width))
+    }
+  }
+  
+  func getData(url url: NSURL) -> NSData? {
+    return Cache.instance.caches[.Data]!.objectForKey(url.absoluteString) as? NSData
+  }
+  
+  func getImage(url url: NSURL) -> UIImage? {
+    return Cache.instance.caches[.Image]!.objectForKey(url.absoluteString) as? UIImage
   }
   
   func resetCache() {
-    ResourcesCache.cache = NSCache()
-    ResourcesCache.cache.totalCostLimit = 20 * 1024 * 1024 * 8
+    self.caches = [
+      CacheContainer.Data: NSCache(),
+      CacheContainer.Image: NSCache()
+    ]
+    self.caches.keys.forEach { key in
+       self.caches[key]!.totalCostLimit = 80 * 1024 * 1024 * 8 * 2
+    }
   }
 }
