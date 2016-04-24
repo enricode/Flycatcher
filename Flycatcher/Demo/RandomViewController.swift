@@ -10,11 +10,7 @@ import UIKit
 
 class RandomViewController: UITableViewController, NSURLSessionDataDelegate {
   
-  var imageURLs = [NSURL]() {
-    didSet {
-      self.tableView.reloadData()
-    }
-  }
+  var imageURLs = [NSURL]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,6 +32,18 @@ class RandomViewController: UITableViewController, NSURLSessionDataDelegate {
  
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return imageURLs.count
+  }
+  
+  @IBAction func addImages() {
+    let current: Int = imageURLs.count
+    let indexPaths = (current...current+19).map { i -> NSIndexPath in
+      imageURLs.append(NSURL(string: Images()[i])!)
+      return NSIndexPath(forRow: i, inSection: 0)
+    }
+    
+    self.tableView.beginUpdates()
+    self.tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+    self.tableView.endUpdates()
   }
   
   override func didReceiveMemoryWarning() {
