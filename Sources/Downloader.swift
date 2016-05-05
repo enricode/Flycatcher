@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Downloader {
+public class Downloader {
   static let instance = Downloader()
   
   let operationQueue: NSOperationQueue

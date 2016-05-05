@@ -8,12 +8,12 @@
 
 import UIKit
 
-enum CacheContainer: Int {
+public enum CacheContainer: Int {
   case Data = 1
   case Image = 2
 }
 
-class Cache {
+public class Cache {
   static var instance: Cache = {
     let cache = Cache()
     cache.resetCache()

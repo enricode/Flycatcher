@@ -9,7 +9,7 @@
 import Foundation
 
 extension NSOperationQueue {
-  func setLIFODependendenciesForOperation(op: NSOperation) {
+  internal func setLIFODependendenciesForOperation(op: NSOperation) {
     // Suspend queue
     let wasSuspended: Bool = self.suspended
     self.suspended = true
@@ -31,7 +31,7 @@ extension NSOperationQueue {
     self.suspended = wasSuspended
   }
 
-  func addOperationAtFrontOfQueue(op: NSOperation) {
+  internal func addOperationAtFrontOfQueue(op: NSOperation) {
     setLIFODependendenciesForOperation(op)
     addOperation(op)
   }

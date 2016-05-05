@@ -8,11 +8,11 @@
 
 import UIKit
 
-enum FlycatcherResult {
+public enum FlycatcherResult {
   case Error(FlycatcherResource, FlycatcherError)
   case Success(FlycatcherResource)
   
-  var resource: FlycatcherResource {
+  public var resource: FlycatcherResource {
     switch self {
     case .Success(let resource):
       return resource

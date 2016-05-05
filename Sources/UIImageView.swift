@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIImageView {  
-  func setAsyncImage(url url: NSURL, placeholder: UIImage? = nil, options: Set<ResourceDownloadOptions> = []) {
+  public func setAsyncImage(url url: NSURL, placeholder: UIImage? = nil, options: Set<ResourceDownloadOptions> = []) {
     // Set background color
     self.backgroundColor = Flycatcher.sharedInstance.backgroundImageViewColor
     
@@ -20,7 +20,7 @@ extension UIImageView {
     Flycatcher.imager().loadImage(url, into: self, options: options)
   }
   
-  func setAsyncImage(url url: String, placeholder: UIImage? = nil, options: Set<ResourceDownloadOptions> = []) {
+  public func setAsyncImage(url url: String, placeholder: UIImage? = nil, options: Set<ResourceDownloadOptions> = []) {
     if let nsurl = NSURL(string: url) {
       setAsyncImage(url: nsurl, placeholder: placeholder, options: options)
     }

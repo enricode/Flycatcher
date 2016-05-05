@@ -17,7 +17,7 @@ import Foundation
  - DownloadTimeout:     Timeout for requesting the data (default is 5 seconds)
  - DownloadTimeoutData: Timeout for downloading the data (default is 25 seconds)
  */
-enum ResourceDownloadOptions {
+public enum ResourceDownloadOptions {
   case PreciseURL
   case DisableCellularData
   case DownloadTimeout(Int16)
@@ -25,7 +25,7 @@ enum ResourceDownloadOptions {
 }
 
 extension ResourceDownloadOptions: Hashable {
-  var hashValue: Int {
+  public var hashValue: Int {
     switch self {
     case .PreciseURL:
       return 1
@@ -40,7 +40,7 @@ extension ResourceDownloadOptions: Hashable {
 }
 
 // Equatable
-func ==(lhs: ResourceDownloadOptions, rhs: ResourceDownloadOptions) -> Bool {
+public func ==(lhs: ResourceDownloadOptions, rhs: ResourceDownloadOptions) -> Bool {
   return lhs.hashValue == rhs.hashValue
 }
 
@@ -53,7 +53,7 @@ func ==(lhs: ResourceDownloadOptions, rhs: ResourceDownloadOptions) -> Bool {
  - OnDisk: Specifies that the resource will be stored in memory and saved on disk
  - None:   Specifies that the resource will not be stored
  */
-enum CacheStoragePolicy {
+public enum CacheStoragePolicy {
   case Memory
   case OnDisk
   case None
@@ -67,15 +67,14 @@ enum CacheStoragePolicy {
  - MaxSize:     The condition is based on a maximum file size
  - MinSize:     The condition is based on a minimum file size
  */
-enum CacheConditionPolicy {
+public enum CacheConditionPolicy {
   case NoCondition
   case MaxSize(Int32)
   case MinSize(Int32)
   //case Time(Int32)
 }
 
-
-enum FlycatcherError {
+public enum FlycatcherError {
   case InvalidURL
   case ResourceNotFound
   case ServerError

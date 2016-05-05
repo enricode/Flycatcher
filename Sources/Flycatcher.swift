@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Flycatcher {
+public class Flycatcher {
   static var sharedInstance = Flycatcher()
   
   private lazy var downloadManager: DownloadManager = {

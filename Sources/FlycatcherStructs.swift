@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct DownloadProgress {
-  let numberOfFiles = 1
+public struct DownloadProgress {
+  public let numberOfFiles = 1
   
-  let total: Int64
-  let current: Int64
+  public let total: Int64
+  public let current: Int64
   
-  var progress: Float {
+  public var progress: Float {
     guard total != 0 else {
       return 0
     }

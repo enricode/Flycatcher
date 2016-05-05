@@ -16,13 +16,13 @@ protocol FlycatcherDownloadManager {
   func preload(urls: [String])
 }
 
-class DownloadManager: FlycatcherDownloadManager {
+public class DownloadManager: FlycatcherDownloadManager {
   let defaultResourceDownloadOptions: Set<ResourceDownloadOptions> = []
   var successor: FlycatcherRequestHandler = Cacher()
   
   /// The base URL to use when loading resource
-  var baseURL = NSURL()
-  var baseURLString: String {
+  public var baseURL = NSURL()
+  public var baseURLString: String {
     var string = baseURL.absoluteString
     
     if string.characters.count > 0 && string.characters.last != "/" {
@@ -34,7 +34,7 @@ class DownloadManager: FlycatcherDownloadManager {
   
   /// Specify how many download are simultaneously executing while
   /// downloading resources.
-  var concurrencyLevel: Int = 2 {
+  public var concurrencyLevel: Int = 2 {
     didSet(newValue) {
       if newValue > 8 {
         print("Concurrency level cannot be great than 8. Setting it to 8.")
@@ -48,7 +48,7 @@ class DownloadManager: FlycatcherDownloadManager {
     }
   }
   
-  func load(url: String, completion: ((FlycatcherResult) -> Void)?) {
+  public func load(url: String, completion: ((FlycatcherResult) -> Void)?) {
     let nsurl = NSURL(string: checkBaseURL(url))
     
     if let correctURL = nsurl {
@@ -59,11 +59,11 @@ class DownloadManager: FlycatcherDownloadManager {
     }
   }
   
-  func load(url: NSURL, completion: ((FlycatcherResult) -> Void)?) {
+  public func load(url: NSURL, completion: ((FlycatcherResult) -> Void)?) {
     self.load(url, options: defaultResourceDownloadOptions, progress: nil, completion: completion)
   }
   
-  func load(url: String, options: Set<ResourceDownloadOptions> = [], progress: ((DownloadProgress) -> ())?, completion: ((FlycatcherResult) -> ())?) {
+  public func load(url: String, options: Set<ResourceDownloadOptions> = [], progress: ((DownloadProgress) -> ())?, completion: ((FlycatcherResult) -> ())?) {
     let nsurl = NSURL(string: checkBaseURL(url))
     
     if let correctURL = nsurl {
@@ -74,7 +74,7 @@ class DownloadManager: FlycatcherDownloadManager {
     }
   }
   
-  func load(url: NSURL, options: Set<ResourceDownloadOptions>, progress: ((DownloadProgress) -> ())?, completion: ((FlycatcherResult) -> Void)?) {
+  public func load(url: NSURL, options: Set<ResourceDownloadOptions>, progress: ((DownloadProgress) -> ())?, completion: ((FlycatcherResult) -> Void)?) {
     // CONSTRUCT REQUEST
     // Resource
     var resource = FlycatcherResource(url: url)
@@ -114,13 +114,13 @@ class DownloadManager: FlycatcherDownloadManager {
     successor.handle(request)
   }
   
-  func preload(urls: [NSURL]) {
+  public func preload(urls: [NSURL]) {
     urls.forEach { (url) in
       load(url, completion: nil)
     }
   }
   
-  func preload(urls: [String]) {
+  public func preload(urls: [String]) {
     let nsUrls = urls.flatMap { (stringURL) -> NSURL? in
       if let url = NSURL(string: checkBaseURL(stringURL)) {
         return url

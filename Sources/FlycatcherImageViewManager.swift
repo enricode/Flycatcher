@@ -13,10 +13,10 @@ import UIKit
  *  the loaded image. It also check if the ImageView is stille responsible
  *  to show the image (ex: in a Table View Cell with refresh of cells)
  */
-struct FlycatcherImageViewManager {
+public struct FlycatcherImageViewManager {
   static var registry = ImageViewRegistry()
   
-  func loadImage(url: NSURL, into imageView: UIImageView, options: Set<ResourceDownloadOptions>) {
+  public func loadImage(url: NSURL, into imageView: UIImageView, options: Set<ResourceDownloadOptions>) {
     // Register the couple of image view and url associated
     FlycatcherImageViewManager.registry.add(ImageViewRegistry.Couple(imageView: imageView, url: url.absoluteString))
     

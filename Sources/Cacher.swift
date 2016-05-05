@@ -8,8 +8,8 @@
 
 import UIKit
 
-struct Cacher: FlycatcherRequestHandler {
-  var request: FlycatcherRequest!
+public struct Cacher: FlycatcherRequestHandler {
+  public var request: FlycatcherRequest!
   
   mutating func handle(request: FlycatcherRequest) {
     self.request = request
@@ -47,7 +47,7 @@ struct Cacher: FlycatcherRequestHandler {
  *  Cache saver - Saves the data to disk/memory (NSCache) and release the request
  *                as it came.
  */
-struct CacheSaver: FlycatcherRequestHandler {
+public struct CacheSaver: FlycatcherRequestHandler {
   mutating func handle(request: FlycatcherRequest) {
     
     switch request.partialResult {
@@ -103,7 +103,7 @@ struct CacheSaver: FlycatcherRequestHandler {
 /**
  *  Cache loader - Load the data from disk/memory (NSCache)
  */
-struct CacheLoader {
+public struct CacheLoader {
   let downloader = Downloader.instance
   var isCached = false
 

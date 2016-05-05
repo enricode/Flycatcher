@@ -10,7 +10,7 @@ import Foundation
 
 extension NSURL {
     /// Return an URL normalized according to RFC3986
-  var normalizedURL: NSURL {
+  public var normalizedURL: NSURL {
     //TODO: follow all the rules
     //https://en.wikipedia.org/wiki/URL_normalization#Normalizations_that_preserve_semantics
     guard let components = NSURLComponents(URL: self, resolvingAgainstBaseURL: true) else {
@@ -37,7 +37,7 @@ extension NSURL {
     return self
   }
   
-  func directoryTreeAndFileName() -> (diretoryTree: [String], filename: String)? {
+  private func directoryTreeAndFileName() -> (diretoryTree: [String], filename: String)? {
     let components = self.pathComponents
     
     // Get directory tree

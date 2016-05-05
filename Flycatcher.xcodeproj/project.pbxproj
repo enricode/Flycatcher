@@ -9,67 +9,52 @@
 /* Begin PBXBuildFile section */
 		3622CBAFF572561FCE84BF78 /* Pods_Flycatcher_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16686872B330D8501ED793BA /* Pods_Flycatcher_iOS.framework */; };
 		4DF551034A0771BF8771B999 /* Pods_Flycatcher_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FFDA73BED508B14DE3DE79 /* Pods_Flycatcher_Demo.framework */; };
-		D912171C1CB50EED00FDBC64 /* Flycatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D912171B1CB50EED00FDBC64 /* Flycatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D91217231CB50EED00FDBC64 /* Flycatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91217181CB50EED00FDBC64 /* Flycatcher.framework */; };
-		D91217331CB518EF00FDBC64 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217321CB518EF00FDBC64 /* UIImageView.swift */; };
-		D91217351CB52B1700FDBC64 /* FlycatcherEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */; };
-		D912173C1CB541F000FDBC64 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173B1CB541F000FDBC64 /* DownloadManager.swift */; };
-		D912173E1CB5420800FDBC64 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173D1CB5420800FDBC64 /* DownloadOperation.swift */; };
-		D91217401CB5426A00FDBC64 /* FlycatcherResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */; };
-		D91217421CB5428300FDBC64 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217411CB5428300FDBC64 /* Cacher.swift */; };
-		D915855C1CCD1901003A7F4E /* FlycatcherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A264501CC25CC9006102A5 /* FlycatcherRequest.swift */; };
-		D915855D1CCD1901003A7F4E /* FlycatcherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A264501CC25CC9006102A5 /* FlycatcherRequest.swift */; };
-		D92BAD841CBD404D008A1002 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173D1CB5420800FDBC64 /* DownloadOperation.swift */; };
-		D92BAD851CBD40D3008A1002 /* FlycatcherStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */; };
-		D92BAD861CBD40D9008A1002 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F51CBBA6F1000807CD /* Downloader.swift */; };
-		D92BAD871CBD40E0008A1002 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217411CB5428300FDBC64 /* Cacher.swift */; };
-		D92BAD891CBE33A2008A1002 /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD881CBE33A2008A1002 /* NSURL.swift */; };
-		D92BAD8B1CBE4999008A1002 /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD881CBE33A2008A1002 /* NSURL.swift */; };
-		D92BAD8D1CBE6F07008A1002 /* NSOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8C1CBE6F07008A1002 /* NSOperationQueue.swift */; };
-		D92BAD8F1CBE85F9008A1002 /* Completor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8E1CBE85F9008A1002 /* Completor.swift */; };
-		D92BAD901CBE9317008A1002 /* NSOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8C1CBE6F07008A1002 /* NSOperationQueue.swift */; };
-		D92BAD911CBE931F008A1002 /* Completor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8E1CBE85F9008A1002 /* Completor.swift */; };
-		D92BADA01CBEB287008A1002 /* ResourcesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD9F1CBEB287008A1002 /* ResourcesCache.swift */; };
-		D92BADA11CBEB2EC008A1002 /* ResourcesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD9F1CBEB287008A1002 /* ResourcesCache.swift */; };
-		D92BADA21CBFCB7C008A1002 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217321CB518EF00FDBC64 /* UIImageView.swift */; };
-		D92BADA61CBFCF3D008A1002 /* FlycatcherImageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BADA51CBFCF3D008A1002 /* FlycatcherImageViewManager.swift */; };
-		D92BADA71CBFCF6A008A1002 /* FlycatcherImageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BADA51CBFCF3D008A1002 /* FlycatcherImageViewManager.swift */; };
 		D92BADAF1CBFEB82008A1002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BADAE1CBFEB82008A1002 /* AppDelegate.swift */; };
 		D92BADB11CBFEB82008A1002 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BADB01CBFEB82008A1002 /* RandomViewController.swift */; };
 		D92BADB41CBFEB82008A1002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92BADB21CBFEB82008A1002 /* Main.storyboard */; };
 		D92BADB61CBFEB82008A1002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D92BADB51CBFEB82008A1002 /* Assets.xcassets */; };
 		D92BADC11CBFF7E3008A1002 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92BADBF1CBFF657008A1002 /* Launch Screen.storyboard */; };
-		D92BADC21CC00293008A1002 /* Flycatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000ED1CB90279000807CD /* Flycatcher.swift */; };
-		D92BADC31CC00293008A1002 /* FlycatcherImageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BADA51CBFCF3D008A1002 /* FlycatcherImageViewManager.swift */; };
-		D92BADC41CC00293008A1002 /* FlycatcherEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */; };
-		D92BADC51CC00293008A1002 /* FlycatcherStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */; };
-		D92BADC61CC00293008A1002 /* FlycatcherResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */; };
-		D92BADC71CC00293008A1002 /* FlycatcherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */; };
-		D92BADC81CC00293008A1002 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173B1CB541F000FDBC64 /* DownloadManager.swift */; };
-		D92BADC91CC00293008A1002 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217411CB5428300FDBC64 /* Cacher.swift */; };
-		D92BADCA1CC00293008A1002 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F51CBBA6F1000807CD /* Downloader.swift */; };
-		D92BADCB1CC00293008A1002 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173D1CB5420800FDBC64 /* DownloadOperation.swift */; };
-		D92BADCC1CC00293008A1002 /* Completor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8E1CBE85F9008A1002 /* Completor.swift */; };
-		D92BADCD1CC00293008A1002 /* ResourcesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD9F1CBEB287008A1002 /* ResourcesCache.swift */; };
-		D92BADCE1CC00298008A1002 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217321CB518EF00FDBC64 /* UIImageView.swift */; };
-		D92BADCF1CC00298008A1002 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BD46341CB7BCC600044548 /* UIImage.swift */; };
-		D92BADD01CC00298008A1002 /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD881CBE33A2008A1002 /* NSURL.swift */; };
-		D92BADD11CC00298008A1002 /* NSOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BAD8C1CBE6F07008A1002 /* NSOperationQueue.swift */; };
+		D93E94B01CDB5F730078DE67 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E949E1CDB5F730078DE67 /* Cacher.swift */; };
+		D93E94B11CDB5F730078DE67 /* Completor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E949F1CDB5F730078DE67 /* Completor.swift */; };
+		D93E94B21CDB5F730078DE67 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A01CDB5F730078DE67 /* Downloader.swift */; };
+		D93E94B31CDB5F730078DE67 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A11CDB5F730078DE67 /* DownloadManager.swift */; };
+		D93E94B41CDB5F730078DE67 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A21CDB5F730078DE67 /* DownloadOperation.swift */; };
+		D93E94B51CDB5F730078DE67 /* Flycatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A31CDB5F730078DE67 /* Flycatcher.swift */; };
+		D93E94B61CDB5F730078DE67 /* FlycatcherEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A41CDB5F730078DE67 /* FlycatcherEnums.swift */; };
+		D93E94B71CDB5F730078DE67 /* FlycatcherImageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A51CDB5F730078DE67 /* FlycatcherImageViewManager.swift */; };
+		D93E94B81CDB5F730078DE67 /* FlycatcherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A61CDB5F730078DE67 /* FlycatcherRequest.swift */; };
+		D93E94B91CDB5F730078DE67 /* FlycatcherResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A71CDB5F730078DE67 /* FlycatcherResource.swift */; };
+		D93E94BA1CDB5F730078DE67 /* FlycatcherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A81CDB5F730078DE67 /* FlycatcherResult.swift */; };
+		D93E94BB1CDB5F730078DE67 /* FlycatcherStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A91CDB5F730078DE67 /* FlycatcherStructs.swift */; };
+		D93E94BC1CDB5F730078DE67 /* NSOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94AA1CDB5F730078DE67 /* NSOperationQueue.swift */; };
+		D93E94BD1CDB5F730078DE67 /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94AB1CDB5F730078DE67 /* NSURL.swift */; };
+		D93E94BE1CDB5F730078DE67 /* ResourcesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94AC1CDB5F730078DE67 /* ResourcesCache.swift */; };
+		D93E94BF1CDB5F730078DE67 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94AD1CDB5F730078DE67 /* UIImage.swift */; };
+		D93E94C01CDB5F730078DE67 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94AE1CDB5F730078DE67 /* UIImageView.swift */; };
+		D93E94C11CDB5F730078DE67 /* Flycatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D93E94AF1CDB5F730078DE67 /* Flycatcher.h */; };
+		D93E94C21CDB5FFF0078DE67 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94AE1CDB5F730078DE67 /* UIImageView.swift */; };
+		D93E94C31CDB600C0078DE67 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94AD1CDB5F730078DE67 /* UIImage.swift */; };
+		D93E94C41CDB600C0078DE67 /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94AB1CDB5F730078DE67 /* NSURL.swift */; };
+		D93E94C51CDB600C0078DE67 /* NSOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94AA1CDB5F730078DE67 /* NSOperationQueue.swift */; };
+		D93E94C61CDB600C0078DE67 /* FlycatcherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A61CDB5F730078DE67 /* FlycatcherRequest.swift */; };
+		D93E94C71CDB600C0078DE67 /* FlycatcherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A81CDB5F730078DE67 /* FlycatcherResult.swift */; };
+		D93E94C81CDB600C0078DE67 /* FlycatcherResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A71CDB5F730078DE67 /* FlycatcherResource.swift */; };
+		D93E94C91CDB600C0078DE67 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A11CDB5F730078DE67 /* DownloadManager.swift */; };
+		D93E94CA1CDB600C0078DE67 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E949E1CDB5F730078DE67 /* Cacher.swift */; };
+		D93E94CB1CDB600C0078DE67 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A01CDB5F730078DE67 /* Downloader.swift */; };
+		D93E94CC1CDB600C0078DE67 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A21CDB5F730078DE67 /* DownloadOperation.swift */; };
+		D93E94CD1CDB600C0078DE67 /* Completor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E949F1CDB5F730078DE67 /* Completor.swift */; };
+		D93E94CE1CDB600C0078DE67 /* Flycatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A31CDB5F730078DE67 /* Flycatcher.swift */; };
+		D93E94CF1CDB600C0078DE67 /* FlycatcherImageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A51CDB5F730078DE67 /* FlycatcherImageViewManager.swift */; };
+		D93E94D01CDB600C0078DE67 /* FlycatcherEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A41CDB5F730078DE67 /* FlycatcherEnums.swift */; };
+		D93E94D11CDB600C0078DE67 /* FlycatcherStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94A91CDB5F730078DE67 /* FlycatcherStructs.swift */; };
+		D93E94D21CDB600C0078DE67 /* ResourcesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E94AC1CDB5F730078DE67 /* ResourcesCache.swift */; };
+		D93E94D41CDB605D0078DE67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D93E94D31CDB605D0078DE67 /* Info.plist */; };
 		D9661CD01CB6AB0F00B009EE /* UIImageViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217391CB53FCA00FDBC64 /* UIImageViewExtensionTests.swift */; };
 		D9661CD11CB6AB0F00B009EE /* DownloadManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912178F1CB69A7000FDBC64 /* DownloadManagerTests.swift */; };
 		D96DFDCB1CCCC9A400782356 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96DFDCA1CCCC9A400782356 /* Images.swift */; };
-		D9A264511CC25CC9006102A5 /* FlycatcherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A264501CC25CC9006102A5 /* FlycatcherRequest.swift */; };
-		D9BD46321CB7A9D000044548 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173B1CB541F000FDBC64 /* DownloadManager.swift */; };
-		D9BD46351CB7BCC600044548 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BD46341CB7BCC600044548 /* UIImage.swift */; };
-		D9E000EA1CB8418A000807CD /* FlycatcherResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */; };
-		D9E000EC1CB8FA53000807CD /* FlycatcherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */; };
-		D9E000EE1CB90279000807CD /* Flycatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000ED1CB90279000807CD /* Flycatcher.swift */; };
-		D9E000EF1CB9035D000807CD /* Flycatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000ED1CB90279000807CD /* Flycatcher.swift */; };
-		D9E000F01CB912EA000807CD /* FlycatcherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */; };
-		D9E000F11CB91308000807CD /* FlycatcherEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */; };
 		D9E000F41CB91D6D000807CD /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = D9E000F31CB91D6D000807CD /* Resources */; };
-		D9E000F61CBBA6F1000807CD /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F51CBBA6F1000807CD /* Downloader.swift */; };
-		D9E000F91CBBB97B000807CD /* FlycatcherStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */; };
 		F2AA2EF46E79E7064199C368 /* Pods_FlycatcherTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E93E2986E7196E1AEFED3A7 /* Pods_FlycatcherTests_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,23 +78,11 @@
 		A0FFDA73BED508B14DE3DE79 /* Pods_Flycatcher_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flycatcher_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EE43EAFC9086461D9B7369 /* Pods-Flycatcher Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flycatcher Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flycatcher Demo/Pods-Flycatcher Demo.release.xcconfig"; sourceTree = "<group>"; };
 		D91217181CB50EED00FDBC64 /* Flycatcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flycatcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D912171B1CB50EED00FDBC64 /* Flycatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flycatcher.h; sourceTree = "<group>"; };
 		D91217221CB50EED00FDBC64 /* FlycatcherTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FlycatcherTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91217271CB50EED00FDBC64 /* FlycatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlycatcherTests.swift; sourceTree = "<group>"; };
 		D91217291CB50EED00FDBC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D91217321CB518EF00FDBC64 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherEnums.swift; sourceTree = "<group>"; };
 		D91217391CB53FCA00FDBC64 /* UIImageViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensionTests.swift; sourceTree = "<group>"; };
-		D912173B1CB541F000FDBC64 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
-		D912173D1CB5420800FDBC64 /* DownloadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadOperation.swift; sourceTree = "<group>"; };
-		D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherResource.swift; sourceTree = "<group>"; };
-		D91217411CB5428300FDBC64 /* Cacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
 		D912178F1CB69A7000FDBC64 /* DownloadManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManagerTests.swift; sourceTree = "<group>"; };
-		D92BAD881CBE33A2008A1002 /* NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURL.swift; sourceTree = "<group>"; };
-		D92BAD8C1CBE6F07008A1002 /* NSOperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSOperationQueue.swift; sourceTree = "<group>"; };
-		D92BAD8E1CBE85F9008A1002 /* Completor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Completor.swift; sourceTree = "<group>"; };
-		D92BAD9F1CBEB287008A1002 /* ResourcesCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesCache.swift; sourceTree = "<group>"; };
-		D92BADA51CBFCF3D008A1002 /* FlycatcherImageViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherImageViewManager.swift; sourceTree = "<group>"; };
 		D92BADAC1CBFEB82008A1002 /* Flycatcher Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flycatcher Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92BADAE1CBFEB82008A1002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D92BADB01CBFEB82008A1002 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
@@ -117,16 +90,29 @@
 		D92BADB51CBFEB82008A1002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D92BADBA1CBFEB82008A1002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D92BADBF1CBFF657008A1002 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D93E949E1CDB5F730078DE67 /* Cacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cacher.swift; path = Sources/Cacher.swift; sourceTree = SOURCE_ROOT; };
+		D93E949F1CDB5F730078DE67 /* Completor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Completor.swift; path = Sources/Completor.swift; sourceTree = SOURCE_ROOT; };
+		D93E94A01CDB5F730078DE67 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = Sources/Downloader.swift; sourceTree = SOURCE_ROOT; };
+		D93E94A11CDB5F730078DE67 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadManager.swift; path = Sources/DownloadManager.swift; sourceTree = SOURCE_ROOT; };
+		D93E94A21CDB5F730078DE67 /* DownloadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadOperation.swift; path = Sources/DownloadOperation.swift; sourceTree = SOURCE_ROOT; };
+		D93E94A31CDB5F730078DE67 /* Flycatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flycatcher.swift; path = Sources/Flycatcher.swift; sourceTree = SOURCE_ROOT; };
+		D93E94A41CDB5F730078DE67 /* FlycatcherEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlycatcherEnums.swift; path = Sources/FlycatcherEnums.swift; sourceTree = SOURCE_ROOT; };
+		D93E94A51CDB5F730078DE67 /* FlycatcherImageViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlycatcherImageViewManager.swift; path = Sources/FlycatcherImageViewManager.swift; sourceTree = SOURCE_ROOT; };
+		D93E94A61CDB5F730078DE67 /* FlycatcherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlycatcherRequest.swift; path = Sources/FlycatcherRequest.swift; sourceTree = SOURCE_ROOT; };
+		D93E94A71CDB5F730078DE67 /* FlycatcherResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlycatcherResource.swift; path = Sources/FlycatcherResource.swift; sourceTree = SOURCE_ROOT; };
+		D93E94A81CDB5F730078DE67 /* FlycatcherResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlycatcherResult.swift; path = Sources/FlycatcherResult.swift; sourceTree = SOURCE_ROOT; };
+		D93E94A91CDB5F730078DE67 /* FlycatcherStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlycatcherStructs.swift; path = Sources/FlycatcherStructs.swift; sourceTree = SOURCE_ROOT; };
+		D93E94AA1CDB5F730078DE67 /* NSOperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSOperationQueue.swift; path = Sources/NSOperationQueue.swift; sourceTree = SOURCE_ROOT; };
+		D93E94AB1CDB5F730078DE67 /* NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSURL.swift; path = Sources/NSURL.swift; sourceTree = SOURCE_ROOT; };
+		D93E94AC1CDB5F730078DE67 /* ResourcesCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourcesCache.swift; path = Sources/ResourcesCache.swift; sourceTree = SOURCE_ROOT; };
+		D93E94AD1CDB5F730078DE67 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Sources/UIImage.swift; sourceTree = SOURCE_ROOT; };
+		D93E94AE1CDB5F730078DE67 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Sources/UIImageView.swift; sourceTree = SOURCE_ROOT; };
+		D93E94AF1CDB5F730078DE67 /* Flycatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flycatcher.h; path = Sources/Flycatcher.h; sourceTree = SOURCE_ROOT; };
+		D93E94D31CDB605D0078DE67 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
 		D9661CD21CB6ABDF00B009EE /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework"; sourceTree = "<group>"; };
 		D9661CD31CB6ABDF00B009EE /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Quick/Quick.framework"; sourceTree = "<group>"; };
 		D96DFDCA1CCCC9A400782356 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		D9A264501CC25CC9006102A5 /* FlycatcherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherRequest.swift; sourceTree = "<group>"; };
-		D9BD46341CB7BCC600044548 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherResult.swift; sourceTree = "<group>"; };
-		D9E000ED1CB90279000807CD /* Flycatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flycatcher.swift; sourceTree = "<group>"; };
 		D9E000F31CB91D6D000807CD /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
-		D9E000F51CBBA6F1000807CD /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
-		D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlycatcherStructs.swift; sourceTree = "<group>"; };
 		E40832F901AE4BA2A8D9BF32 /* Pods-Flycatcher iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flycatcher iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flycatcher iOS/Pods-Flycatcher iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,15 +195,16 @@
 		D912171A1CB50EED00FDBC64 /* Flycatcher */ = {
 			isa = PBXGroup;
 			children = (
-				D912171B1CB50EED00FDBC64 /* Flycatcher.h */,
+				D93E94D31CDB605D0078DE67 /* Info.plist */,
+				D93E94AF1CDB5F730078DE67 /* Flycatcher.h */,
 				D9BD46331CB7BCBB00044548 /* Extensions */,
 				D9A2644F1CC25CB0006102A5 /* Request/Resource */,
 				D915855B1CCD0027003A7F4E /* Chain */,
-				D9E000ED1CB90279000807CD /* Flycatcher.swift */,
-				D92BADA51CBFCF3D008A1002 /* FlycatcherImageViewManager.swift */,
-				D91217341CB52B1700FDBC64 /* FlycatcherEnums.swift */,
-				D9E000F81CBBB97B000807CD /* FlycatcherStructs.swift */,
-				D92BAD9F1CBEB287008A1002 /* ResourcesCache.swift */,
+				D93E94A31CDB5F730078DE67 /* Flycatcher.swift */,
+				D93E94A51CDB5F730078DE67 /* FlycatcherImageViewManager.swift */,
+				D93E94A41CDB5F730078DE67 /* FlycatcherEnums.swift */,
+				D93E94A91CDB5F730078DE67 /* FlycatcherStructs.swift */,
+				D93E94AC1CDB5F730078DE67 /* ResourcesCache.swift */,
 			);
 			path = Flycatcher;
 			sourceTree = "<group>";
@@ -237,11 +224,11 @@
 		D915855B1CCD0027003A7F4E /* Chain */ = {
 			isa = PBXGroup;
 			children = (
-				D912173B1CB541F000FDBC64 /* DownloadManager.swift */,
-				D91217411CB5428300FDBC64 /* Cacher.swift */,
-				D9E000F51CBBA6F1000807CD /* Downloader.swift */,
-				D912173D1CB5420800FDBC64 /* DownloadOperation.swift */,
-				D92BAD8E1CBE85F9008A1002 /* Completor.swift */,
+				D93E94A11CDB5F730078DE67 /* DownloadManager.swift */,
+				D93E949E1CDB5F730078DE67 /* Cacher.swift */,
+				D93E94A01CDB5F730078DE67 /* Downloader.swift */,
+				D93E94A21CDB5F730078DE67 /* DownloadOperation.swift */,
+				D93E949F1CDB5F730078DE67 /* Completor.swift */,
 			);
 			name = Chain;
 			sourceTree = "<group>";
@@ -264,9 +251,9 @@
 		D9A2644F1CC25CB0006102A5 /* Request/Resource */ = {
 			isa = PBXGroup;
 			children = (
-				D9A264501CC25CC9006102A5 /* FlycatcherRequest.swift */,
-				D9E000EB1CB8FA53000807CD /* FlycatcherResult.swift */,
-				D912173F1CB5426A00FDBC64 /* FlycatcherResource.swift */,
+				D93E94A61CDB5F730078DE67 /* FlycatcherRequest.swift */,
+				D93E94A81CDB5F730078DE67 /* FlycatcherResult.swift */,
+				D93E94A71CDB5F730078DE67 /* FlycatcherResource.swift */,
 			);
 			name = Request/Resource;
 			sourceTree = "<group>";
@@ -274,10 +261,10 @@
 		D9BD46331CB7BCBB00044548 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D91217321CB518EF00FDBC64 /* UIImageView.swift */,
-				D9BD46341CB7BCC600044548 /* UIImage.swift */,
-				D92BAD881CBE33A2008A1002 /* NSURL.swift */,
-				D92BAD8C1CBE6F07008A1002 /* NSOperationQueue.swift */,
+				D93E94AE1CDB5F730078DE67 /* UIImageView.swift */,
+				D93E94AD1CDB5F730078DE67 /* UIImage.swift */,
+				D93E94AB1CDB5F730078DE67 /* NSURL.swift */,
+				D93E94AA1CDB5F730078DE67 /* NSOperationQueue.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -289,7 +276,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D912171C1CB50EED00FDBC64 /* Flycatcher.h in Headers */,
+				D93E94C11CDB5F730078DE67 /* Flycatcher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D93E94D41CDB605D0078DE67 /* Info.plist in Resources */,
 				D9E000F41CB91D6D000807CD /* Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,23 +558,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9E000F91CBBB97B000807CD /* FlycatcherStructs.swift in Sources */,
-				D9E000F61CBBA6F1000807CD /* Downloader.swift in Sources */,
-				D92BADA61CBFCF3D008A1002 /* FlycatcherImageViewManager.swift in Sources */,
-				D92BADA01CBEB287008A1002 /* ResourcesCache.swift in Sources */,
-				D91217401CB5426A00FDBC64 /* FlycatcherResource.swift in Sources */,
-				D9E000EE1CB90279000807CD /* Flycatcher.swift in Sources */,
-				D912173E1CB5420800FDBC64 /* DownloadOperation.swift in Sources */,
-				D9A264511CC25CC9006102A5 /* FlycatcherRequest.swift in Sources */,
-				D92BAD8F1CBE85F9008A1002 /* Completor.swift in Sources */,
-				D91217331CB518EF00FDBC64 /* UIImageView.swift in Sources */,
-				D92BAD8D1CBE6F07008A1002 /* NSOperationQueue.swift in Sources */,
-				D92BAD891CBE33A2008A1002 /* NSURL.swift in Sources */,
-				D91217351CB52B1700FDBC64 /* FlycatcherEnums.swift in Sources */,
-				D912173C1CB541F000FDBC64 /* DownloadManager.swift in Sources */,
-				D9E000EC1CB8FA53000807CD /* FlycatcherResult.swift in Sources */,
-				D91217421CB5428300FDBC64 /* Cacher.swift in Sources */,
-				D9BD46351CB7BCC600044548 /* UIImage.swift in Sources */,
+				D93E94B91CDB5F730078DE67 /* FlycatcherResource.swift in Sources */,
+				D93E94BB1CDB5F730078DE67 /* FlycatcherStructs.swift in Sources */,
+				D93E94B41CDB5F730078DE67 /* DownloadOperation.swift in Sources */,
+				D93E94B81CDB5F730078DE67 /* FlycatcherRequest.swift in Sources */,
+				D93E94B61CDB5F730078DE67 /* FlycatcherEnums.swift in Sources */,
+				D93E94BF1CDB5F730078DE67 /* UIImage.swift in Sources */,
+				D93E94BD1CDB5F730078DE67 /* NSURL.swift in Sources */,
+				D93E94B21CDB5F730078DE67 /* Downloader.swift in Sources */,
+				D93E94B71CDB5F730078DE67 /* FlycatcherImageViewManager.swift in Sources */,
+				D93E94B11CDB5F730078DE67 /* Completor.swift in Sources */,
+				D93E94BC1CDB5F730078DE67 /* NSOperationQueue.swift in Sources */,
+				D93E94B31CDB5F730078DE67 /* DownloadManager.swift in Sources */,
+				D93E94B51CDB5F730078DE67 /* Flycatcher.swift in Sources */,
+				D93E94B01CDB5F730078DE67 /* Cacher.swift in Sources */,
+				D93E94BA1CDB5F730078DE67 /* FlycatcherResult.swift in Sources */,
+				D93E94BE1CDB5F730078DE67 /* ResourcesCache.swift in Sources */,
+				D93E94C01CDB5F730078DE67 /* UIImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,24 +582,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D92BAD861CBD40D9008A1002 /* Downloader.swift in Sources */,
-				D92BAD851CBD40D3008A1002 /* FlycatcherStructs.swift in Sources */,
-				D92BADA11CBEB2EC008A1002 /* ResourcesCache.swift in Sources */,
-				D9E000EF1CB9035D000807CD /* Flycatcher.swift in Sources */,
-				D9E000EA1CB8418A000807CD /* FlycatcherResource.swift in Sources */,
-				D92BAD901CBE9317008A1002 /* NSOperationQueue.swift in Sources */,
-				D92BAD911CBE931F008A1002 /* Completor.swift in Sources */,
-				D9E000F11CB91308000807CD /* FlycatcherEnums.swift in Sources */,
-				D92BADA21CBFCB7C008A1002 /* UIImageView.swift in Sources */,
-				D92BAD841CBD404D008A1002 /* DownloadOperation.swift in Sources */,
-				D92BAD8B1CBE4999008A1002 /* NSURL.swift in Sources */,
 				D9661CD01CB6AB0F00B009EE /* UIImageViewExtensionTests.swift in Sources */,
-				D92BAD871CBD40E0008A1002 /* Cacher.swift in Sources */,
-				D9BD46321CB7A9D000044548 /* DownloadManager.swift in Sources */,
-				D915855C1CCD1901003A7F4E /* FlycatcherRequest.swift in Sources */,
 				D9661CD11CB6AB0F00B009EE /* DownloadManagerTests.swift in Sources */,
-				D9E000F01CB912EA000807CD /* FlycatcherResult.swift in Sources */,
-				D92BADA71CBFCF6A008A1002 /* FlycatcherImageViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,26 +591,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D915855D1CCD1901003A7F4E /* FlycatcherRequest.swift in Sources */,
-				D92BADCD1CC00293008A1002 /* ResourcesCache.swift in Sources */,
-				D92BADCE1CC00298008A1002 /* UIImageView.swift in Sources */,
-				D92BADCA1CC00293008A1002 /* Downloader.swift in Sources */,
+				D93E94CE1CDB600C0078DE67 /* Flycatcher.swift in Sources */,
+				D93E94D11CDB600C0078DE67 /* FlycatcherStructs.swift in Sources */,
+				D93E94D21CDB600C0078DE67 /* ResourcesCache.swift in Sources */,
+				D93E94C61CDB600C0078DE67 /* FlycatcherRequest.swift in Sources */,
+				D93E94C91CDB600C0078DE67 /* DownloadManager.swift in Sources */,
+				D93E94C41CDB600C0078DE67 /* NSURL.swift in Sources */,
+				D93E94C51CDB600C0078DE67 /* NSOperationQueue.swift in Sources */,
+				D93E94C21CDB5FFF0078DE67 /* UIImageView.swift in Sources */,
+				D93E94C31CDB600C0078DE67 /* UIImage.swift in Sources */,
 				D92BADB11CBFEB82008A1002 /* RandomViewController.swift in Sources */,
-				D92BADC21CC00293008A1002 /* Flycatcher.swift in Sources */,
-				D92BADC31CC00293008A1002 /* FlycatcherImageViewManager.swift in Sources */,
-				D92BADC91CC00293008A1002 /* Cacher.swift in Sources */,
-				D92BADCC1CC00293008A1002 /* Completor.swift in Sources */,
-				D92BADC51CC00293008A1002 /* FlycatcherStructs.swift in Sources */,
-				D92BADCF1CC00298008A1002 /* UIImage.swift in Sources */,
+				D93E94C81CDB600C0078DE67 /* FlycatcherResource.swift in Sources */,
+				D93E94CB1CDB600C0078DE67 /* Downloader.swift in Sources */,
+				D93E94CC1CDB600C0078DE67 /* DownloadOperation.swift in Sources */,
+				D93E94D01CDB600C0078DE67 /* FlycatcherEnums.swift in Sources */,
 				D92BADAF1CBFEB82008A1002 /* AppDelegate.swift in Sources */,
-				D92BADC71CC00293008A1002 /* FlycatcherResult.swift in Sources */,
-				D92BADD11CC00298008A1002 /* NSOperationQueue.swift in Sources */,
-				D92BADC61CC00293008A1002 /* FlycatcherResource.swift in Sources */,
-				D92BADC81CC00293008A1002 /* DownloadManager.swift in Sources */,
-				D92BADC41CC00293008A1002 /* FlycatcherEnums.swift in Sources */,
+				D93E94CA1CDB600C0078DE67 /* Cacher.swift in Sources */,
 				D96DFDCB1CCCC9A400782356 /* Images.swift in Sources */,
-				D92BADD01CC00298008A1002 /* NSURL.swift in Sources */,
-				D92BADCB1CC00293008A1002 /* DownloadOperation.swift in Sources */,
+				D93E94C71CDB600C0078DE67 /* FlycatcherResult.swift in Sources */,
+				D93E94CD1CDB600C0078DE67 /* Completor.swift in Sources */,
+				D93E94CF1CDB600C0078DE67 /* FlycatcherImageViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,12 +735,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E40832F901AE4BA2A8D9BF32 /* Pods-Flycatcher iOS.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Flycatcher/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -784,12 +757,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98F8E079AEA62BF0051306BE /* Pods-Flycatcher iOS.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Flycatcher/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -827,7 +801,7 @@
 			baseConfigurationReference = 9F23B85803BFF04093CBBF4E /* Pods-Flycatcher Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Flycatcher/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Flycatcher/Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.capibara.Flycatcher;
@@ -840,7 +814,7 @@
 			baseConfigurationReference = A3EE43EAFC9086461D9B7369 /* Pods-Flycatcher Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Flycatcher/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Flycatcher/Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.capibara.Flycatcher;
