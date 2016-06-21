@@ -46,7 +46,7 @@ extension Downloader: FlycatcherRequestHandler {
     assert(request.partialResult.resource.resourceData == nil)
     
     // Update download manager
-    operationQueue.maxConcurrentOperationCount = Flycatcher.downloader().concurrencyLevel
+    operationQueue.maxConcurrentOperationCount = Flycatcher.downloader.concurrencyLevel
     
     // Check for pending operations and add to acquaintance
     for operation in operationQueue.operations {

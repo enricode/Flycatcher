@@ -21,24 +21,24 @@ public class Flycatcher {
   
   var backgroundImageViewColor = UIColor(white: 230.0/255.0, alpha: 1)
   
-  class func downloader() -> DownloadManager {
+  public static var downloader: DownloadManager {
     return Flycatcher.sharedInstance.downloadManager
   }
 
-  class func imager() -> FlycatcherImageViewManager {
+  public static var imager: FlycatcherImageViewManager {
     return Flycatcher.sharedInstance.imageViewManager
   }
   
-  class func clearAllResourcesCache() {
+  public class func clearAllResourcesCache() {
     clearAllDiskCache()
     clearAllInMemoryCache()
   }
   
-  class func clearAllDiskCache() {
+  public class func clearAllDiskCache() {
     
   }
   
-  class func clearAllInMemoryCache() {
+  public class func clearAllInMemoryCache() {
     Cache.instance.resetCache()
   }
 }

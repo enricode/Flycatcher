@@ -17,7 +17,7 @@ extension UIImageView {
     image = placeholder
     
     // Download asyncronally the image
-    Flycatcher.imager().loadImage(url, into: self, options: options)
+    Flycatcher.imager.loadImage(url, into: self, options: options)
   }
   
   public func setAsyncImage(url url: String, placeholder: UIImage? = nil, options: Set<ResourceDownloadOptions> = []) {

@@ -20,7 +20,7 @@ public struct FlycatcherImageViewManager {
     // Register the couple of image view and url associated
     FlycatcherImageViewManager.registry.add(ImageViewRegistry.Couple(imageView: imageView, url: url.absoluteString))
     
-    Flycatcher.downloader().load(url, options: options, progress: nil) { [weak weakImageView = imageView] (result) in
+    Flycatcher.downloader.load(url, options: options, progress: nil) { [weak weakImageView = imageView] (result) in
       //TODO: Check for image resource
       /*guard let image = result.image, let imageView = weakImageView else {
         return

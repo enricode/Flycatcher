@@ -57,7 +57,7 @@ class RandomViewController: UITableViewController, NSURLSessionDataDelegate {
       return NSIndexPath(forRow: i, inSection: 0)
     }
     
-    Flycatcher.downloader().preload(newPreload)
+    Flycatcher.downloader.preload(newPreload)
     
     self.tableView.beginUpdates()
     self.tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
